@@ -1,14 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x89C8C51B1B698E50",
+      "boundary_crc": "0x89C8C51BF4A53313",
       "design_src": "/home/jo/projects/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/bd/vga_hdmi_clk_rst_system/vga_hdmi_clk_rst_system.bd",
       "device": "xc7z015clg485-2",
       "name": "vga_hdmi_clk_rst_system_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true",
+      "tool_version": "2024.2",
       "variant": "true"
     },
     "design_tree": {
@@ -25,15 +24,11 @@
         "parameters": {
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "POLARITY": {
             "value": "ACTIVE_LOW",
-            "value_src": "const_prop"
-          },
-          "TYPE": {
-            "value": "PERIPHERAL",
-            "value_src": "strong"
+            "value_src": "default"
           }
         }
       },
@@ -45,15 +40,11 @@
         "parameters": {
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "POLARITY": {
             "value": "ACTIVE_HIGH",
-            "value_src": "const_prop"
-          },
-          "TYPE": {
-            "value": "PERIPHERAL",
-            "value_src": "strong"
+            "value_src": "default"
           }
         }
       },
@@ -62,28 +53,24 @@
         "direction": "O",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "ClkHdmiRstxRNAO:ClkHdmiRstxRO",
-            "value_src": "strong"
-          },
-          "CLK_DOMAIN": {
-            "value": "/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1",
-            "value_src": "ip_prop"
+            "value": "ClkHdmiRstxRO:ClkHdmiRstxRNAO",
+            "value_src": "default"
           },
           "FREQ_HZ": {
             "value": "240000000",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           }
         }
       },
@@ -95,15 +82,11 @@
         "parameters": {
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "POLARITY": {
             "value": "ACTIVE_LOW",
-            "value_src": "const_prop"
-          },
-          "TYPE": {
-            "value": "PERIPHERAL",
-            "value_src": "strong"
+            "value_src": "default"
           }
         }
       },
@@ -115,15 +98,11 @@
         "parameters": {
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "POLARITY": {
             "value": "ACTIVE_HIGH",
-            "value_src": "const_prop"
-          },
-          "TYPE": {
-            "value": "PERIPHERAL",
-            "value_src": "strong"
+            "value_src": "default"
           }
         }
       },
@@ -132,28 +111,24 @@
         "direction": "O",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "ClkVgaRstxRNAO:ClkVgaRstxRO",
-            "value_src": "strong"
-          },
-          "CLK_DOMAIN": {
-            "value": "/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1",
-            "value_src": "ip_prop"
+            "value": "ClkVgaRstxRO:ClkVgaRstxRNAO",
+            "value_src": "default"
           },
           "FREQ_HZ": {
             "value": "48000000",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           }
         }
       },
@@ -170,7 +145,7 @@
           },
           "POLARITY": {
             "value": "ACTIVE_LOW",
-            "value_src": "default_prop"
+            "value_src": "strong"
           }
         }
       },
@@ -183,12 +158,12 @@
             "value_src": "strong"
           },
           "CLK_DOMAIN": {
-            "value": "scalp_zynqps_processing_system7_0_0_FCLK_CLK0",
-            "value_src": "default_prop"
+            "value": "vga_hdmi_clk_rst_system_PsClockxCI",
+            "value_src": "strong"
           },
           "FREQ_HZ": {
             "value": "125000000",
-            "value_src": "user_prop"
+            "value_src": "strong"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -200,7 +175,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default_prop"
+            "value_src": "strong"
           }
         }
       }
@@ -208,11 +183,14 @@
     "components": {
       "vga_hdmi_clock": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "ip_revision": "13",
+        "ip_revision": "15",
         "xci_name": "vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0",
-        "xci_path": "ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0.xci",
+        "xci_path": "ip\\vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0\\vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0.xci",
         "inst_hier_path": "vga_hdmi_clock",
         "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
           "CLKOUT1_JITTER": {
             "value": "197.699"
           },
@@ -243,6 +221,9 @@
           "MMCM_CLKFBOUT_MULT_F": {
             "value": "48.000"
           },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
           "MMCM_CLKOUT0_DIVIDE_F": {
             "value": "25.000"
           },
@@ -268,16 +249,16 @@
       },
       "rst_ps7_1_vga": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
+        "ip_revision": "16",
         "xci_name": "vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0",
-        "xci_path": "ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.xci",
+        "xci_path": "ip\\vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0\\vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.xci",
         "inst_hier_path": "rst_ps7_1_vga"
       },
       "rst_ps7_2_hdmi": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
+        "ip_revision": "16",
         "xci_name": "vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0",
-        "xci_path": "ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0.xci",
+        "xci_path": "ip\\vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0\\vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0.xci",
         "inst_hier_path": "rst_ps7_2_hdmi"
       }
     },
@@ -291,9 +272,9 @@
       "resetn_0_1": {
         "ports": [
           "PsResetxRN",
-          "vga_hdmi_clock/resetn",
           "rst_ps7_1_vga/ext_reset_in",
-          "rst_ps7_2_hdmi/ext_reset_in"
+          "rst_ps7_2_hdmi/ext_reset_in",
+          "vga_hdmi_clock/resetn"
         ]
       },
       "rst_ps7_1_vga_peripheral_aresetn": {
@@ -323,23 +304,23 @@
       "vga_hdmi_clock_clk_hdmi": {
         "ports": [
           "vga_hdmi_clock/clk_hdmi",
-          "rst_ps7_2_hdmi/slowest_sync_clk",
-          "ClkHdmixCO"
+          "ClkHdmixCO",
+          "rst_ps7_2_hdmi/slowest_sync_clk"
         ]
       },
       "vga_hdmi_clock_clk_vga": {
         "ports": [
           "vga_hdmi_clock/clk_vga",
-          "rst_ps7_1_vga/slowest_sync_clk",
-          "ClkVgaxCO"
+          "ClkVgaxCO",
+          "rst_ps7_1_vga/slowest_sync_clk"
         ]
       },
       "vga_hdmi_clock_locked": {
         "ports": [
           "vga_hdmi_clock/locked",
+          "VgaHdmiClkPllLockedxSO",
           "rst_ps7_1_vga/dcm_locked",
-          "rst_ps7_2_hdmi/dcm_locked",
-          "VgaHdmiClkPllLockedxSO"
+          "rst_ps7_2_hdmi/dcm_locked"
         ]
       }
     }
