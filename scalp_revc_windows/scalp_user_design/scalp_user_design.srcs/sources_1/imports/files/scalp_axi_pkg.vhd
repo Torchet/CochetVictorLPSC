@@ -285,7 +285,7 @@ package scalp_axi_pkg is
     type t_axi_read_ctrl_regfile_ms2 is record
         RdAddrxD  : std_logic_vector((C_AXI_ADDR_SIZE - 1) downto 0);
         RdValidxS : std_logic;
-    end record t_axi_read_ctrl_regfile_m2s;
+    end record t_axi_read_ctrl_regfile_ms2;
 
     type t_axi_read_ctrl_regfile_s2m is record
         RdDataxD : std_logic_vector((C_AXI_DATA_SIZE - 1) downto 0);

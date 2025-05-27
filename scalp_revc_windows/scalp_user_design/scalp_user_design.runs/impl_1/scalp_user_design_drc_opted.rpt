@@ -1,0 +1,76 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue May 27 08:15:27 2025
+| Host         : Torchet running 64-bit major release  (build 9200)
+| Command      : report_drc -file scalp_user_design_drc_opted.rpt -pb scalp_user_design_drc_opted.pb -rpx scalp_user_design_drc_opted.rpx
+| Design       : scalp_user_design
+| Device       : xc7z015clg485-2
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 8
++---------+----------+----------------------------+--------+
+| Rule    | Severity | Description                | Checks |
++---------+----------+----------------------------+--------+
+| AVAL-70 | Warning  | OSERDES_DataRateTqTriWidth | 8      |
++---------+----------+----------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+AVAL-70#1 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC0xI/MasterOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#2 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC0xI/SlaveOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#3 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC1xI/MasterOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#4 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC1xI/SlaveOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#5 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC2xI/MasterOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#6 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC2xI/SlaveOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#7 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC3xI/MasterOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+AVAL-70#8 Warning
+OSERDES_DataRateTqTriWidth  
+Unexpected programming for PLxB.HdmixB.TxxI/Vga2HdmiConvertxB.Vga2HdmixI/SerializersxB.SerializerC3xI/SlaveOSERDESE2xI with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+Related violations: <none>
+
+

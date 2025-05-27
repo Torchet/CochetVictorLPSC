@@ -820,9 +820,31 @@ begin
             -- Signals
             signal CDCPatternPortsxD : t_axi_bunch_of_registers(1 downto 0) := (0 => C_AXI_BG_REGISTER,
                                                                                 1 => C_AXI_CROSS_REGISTER);
+            signal BramWAddrxD : std_logic_vector(8 downto 0) := (others => '0');
+            signal BramRAddrxD : std_logic_vector(8 downto 0) := (others => '0');
             signal BramAddrxD : std_logic_vector(8 downto 0) := (others => '0');
             signal BramWexD   : std_logic_vector(3 downto 0) := (others => '1');
+            -- Mandelbrot calculator clock
+            signal MndlClk625xC                : std_logic         := '0';
+            -- Mandelbrot calculator pll locked
+            signal MndlClk625PllLockedxS       : std_logic         := '0';
+            -- Mandelbrot calculator pll locked
+            signal MndlClk625FdbkxS       : std_logic         := '0';
+            signal MndlPllRstxS             : std_logic     := '0';
+            signal MndlPllPwrDwn            : std_logic := '0';
 
+            
+            TYPE MndelState IS (STARTUP,ROUGE,BLEU,VERT);
+            signal state: MndelState := ROUGE;
+            signal next_state: MndelState;
+            signal PixelMndxD          : t_hdmi_vga_pix                                        := C_HDMI_VGA_PIX_RED;
+            signal PatterMndnPortsxD   : t_axi_bunch_of_registers(1 downto 0)                  := (others => C_AXI_REGISTER_IDLE);
+
+            signal EastFrontier         : integer range 1 to 720:=576;
+            signal WestFrontier         : integer range 1 to 720:=144;
+
+            signal NorthFrontier         : integer range 1 to 720:=432;
+            signal SouthFrontier         : integer range 1 to 720:=288;
             -- Attributes
             attribute mark_debug : string;
             attribute keep       : string;
@@ -875,7 +897,7 @@ begin
                     INIT                => X"000000000000000000")
                 port map (
                     DO     => CDCPatternPortsxD(1).RegxD,
-                    DI     => PatternPortsxD(1).RegxD,
+                    DI     => PatternPortsxD(0).RegxD,
                     RDADDR => BramAddrxD,
                     RDCLK  => HdmiVgaClocksxC.VgaxC,
                     RDEN   => '1',
@@ -886,39 +908,100 @@ begin
                     WRCLK  => ClpxNumRegsAxixD.ClockxC.ClkxC,
                     WREN   => '1');
 
+                -- PLLE2_BASE: Base Phase Locked Loop (PLL)
+                --             7 Series
+                -- Xilinx HDL Language Template, version 2024.2
+
+                PLLE2_BASE_inst : PLLE2_BASE
+                generic map (
+                BANDWIDTH => "OPTIMIZED",  -- OPTIMIZED, HIGH, LOW
+                CLKFBOUT_MULT => 7,        -- Multiply value for all CLKOUT, (2-64)
+                CLKFBOUT_PHASE => 0.0,     -- Phase offset in degrees of CLKFB, (-360.000-360.000).
+                CLKIN1_PERIOD => 8.0,      -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+                -- CLKOUT0_DIVIDE - CLKOUT5_DIVIDE: Divide amount for each CLKOUT (1-128)
+                CLKOUT0_DIVIDE => 1,
+                --CLKOUT1_DIVIDE => 1,
+                --CLKOUT2_DIVIDE => 1,
+                --CLKOUT3_DIVIDE => 1,
+                --CLKOUT4_DIVIDE => 1,
+                --CLKOUT5_DIVIDE => 1,
+                -- CLKOUT0_DUTY_CYCLE - CLKOUT5_DUTY_CYCLE: Duty cycle for each CLKOUT (0.001-0.999).
+                CLKOUT0_DUTY_CYCLE => 0.5,
+                --CLKOUT1_DUTY_CYCLE => 0.5,
+                --CLKOUT2_DUTY_CYCLE => 0.5,
+                --CLKOUT3_DUTY_CYCLE => 0.5,
+                --CLKOUT4_DUTY_CYCLE => 0.5,
+                --CLKOUT5_DUTY_CYCLE => 0.5,
+                -- CLKOUT0_PHASE - CLKOUT5_PHASE: Phase offset for each CLKOUT (-360.000-360.000).
+                CLKOUT0_PHASE => 0.0,
+                --CLKOUT1_PHASE => 0.0,
+                --CLKOUT2_PHASE => 0.0,
+                --CLKOUT3_PHASE => 0.0,
+                --CLKOUT4_PHASE => 0.0,
+                --CLKOUT5_PHASE => 0.0,
+                DIVCLK_DIVIDE => 1,        -- Master division value, (1-56)
+                REF_JITTER1 => 0.0,        -- Reference input jitter in UI, (0.000-0.999).
+                STARTUP_WAIT => "FALSE"    -- Delay DONE until PLL Locks, ("TRUE"/"FALSE")
+                )
+                port map (
+                -- Clock Outputs: 1-bit (each) output: User configurable clock outputs
+                CLKOUT0 => MndlClk625xC,   -- 1-bit output: CLKOUT0
+                --CLKOUT1 => CLKOUT1,   -- 1-bit output: CLKOUT1
+                --CLKOUT2 => CLKOUT2,   -- 1-bit output: CLKOUT2
+                --CLKOUT3 => CLKOUT3,   -- 1-bit output: CLKOUT3
+                --CLKOUT4 => CLKOUT4,   -- 1-bit output: CLKOUT4
+                --CLKOUT5 => CLKOUT5,   -- 1-bit output: CLKOUT5
+                -- Feedback Clocks: 1-bit (each) output: Clock feedback ports
+                CLKFBOUT => MndlClk625FdbkxS, -- 1-bit output: Feedback clock
+                LOCKED => MndlClk625PllLockedxS,     -- 1-bit output: LOCK
+                CLKIN1 => Clk125xC,     -- 1-bit input: Input clock
+                -- Control Ports: 1-bit (each) input: PLL control ports
+                PWRDWN => '0',     -- 1-bit input: Power-down
+                RST => '1',           -- 1-bit input: Reset
+                -- Feedback Clocks: 1-bit (each) input: Clock feedback ports
+                CLKFBIN => MndlClk625FdbkxS    -- 1-bit input: Feedback clock
+                );
+
+                -- End of PLLE2_BASE_inst instantiation
+            ChangeColor : process(MndlClk625xC) is
+            begin
+                if rising_edge(MndlClk625xC) then
+                        if BramWAddrxD < BramRAddrxD then 
+                            case state is
+                                when STARTUP         =>
+                                    --PatterMndnPortsxD(0).RegxD <= x"0ff00000";
+                                    state <= BLEU;
+                                when BLEU            =>
+                                    --PatterMndnPortsxD(0).RegxD <= x"00000ff0";
+                                    state <= VERT;
+                                when VERT        =>
+                                    --PatterMndnPortsxD(0).RegxD <= x"000ff000";
+                                    state <= ROUGE;
+                                when ROUGE     => 
+                                    --PatterMndnPortsxD(0).RegxD <= x"00f0f0f0";
+                                    state <= STARTUP;
+                            end case;
+                            --BramWAddrxD <= std_logic_vector(signed(BramWAddrxD)+1);
+                        end if;
+
+
+                end if;
+            end process ChangeColor;
+
             SwissFlagxP : process (HdmiVgaClocksxC.PllLockedxS,
                                    HdmiVgaClocksxC.VgaResetxRNA,
                                    HdmiVgaClocksxC.VgaxC) is
             begin  -- process SwissFlagxP
                 if (HdmiVgaClocksxC.PllLockedxS = '0') or (HdmiVgaClocksxC.VgaResetxRNA = '0') then
-                    PixelxD <= C_HDMI_VGA_PIX_IDLE;
+                    PixelxD <= C_HDMI_VGA_PIX_BLACK;
                 elsif rising_edge(HdmiVgaClocksxC.VgaxC) then
                     if VgaPixCountersxD.VidOnxS = '1' then
-                        PixelxD.RxD <= CDCPatternPortsxD(0).RegxD((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
-                        PixelxD.GxD <= CDCPatternPortsxD(0).RegxD(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
-                        PixelxD.BxD <= CDCPatternPortsxD(0).RegxD((C_VGA_PIXEL_SIZE - 1) downto 0);
-
-                        if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 288) and
-                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 432) then
-                            if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 144) and
-                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 576) then
-                                PixelxD.RxD <= CDCPatternPortsxD(1).RegxD((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
-                                PixelxD.GxD <= CDCPatternPortsxD(1).RegxD(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
-                                PixelxD.BxD <= CDCPatternPortsxD(1).RegxD((C_VGA_PIXEL_SIZE - 1) downto 0);
-                            end if;
-                        end if;
-
-                        if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 144) and
-                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 576) then
-                            if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 288) and
-                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 432) then
-                                PixelxD.RxD <= CDCPatternPortsxD(1).RegxD((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
-                                PixelxD.GxD <= CDCPatternPortsxD(1).RegxD(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
-                                PixelxD.BxD <= CDCPatternPortsxD(1).RegxD((C_VGA_PIXEL_SIZE - 1) downto 0);
-                            end if;
-                        end if;
+                        PatterMndnPortsxD(0).RegxD <= std_logic_vector(unsigned(PatterMndnPortsxD(0).RegxD) +32);
+                        PixelxD.RxD <= PatterMndnPortsxD(0).RegxD((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
+                        PixelxD.GxD <= PatterMndnPortsxD(0).RegxD(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
+                        PixelxD.BxD <= PatterMndnPortsxD(0).RegxD((C_VGA_PIXEL_SIZE - 1) downto 0);
                     else
-                        PixelxD <= C_HDMI_VGA_PIX_IDLE;
+                        --PixelxD <= C_HDMI_VGA_PIX_WHITE;
                     end if;
                 end if;
             end process SwissFlagxP;
