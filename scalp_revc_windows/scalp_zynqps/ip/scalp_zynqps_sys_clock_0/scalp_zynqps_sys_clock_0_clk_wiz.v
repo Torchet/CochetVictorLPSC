@@ -54,6 +54,7 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // _clk_125__125.00000______0.000______50.0______119.348_____96.948
+// _clk_500__250.00000______0.000______50.0______104.759_____96.948
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -67,6 +68,7 @@ module scalp_zynqps_sys_clock_0_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        clk_125,
+  output        clk_500,
   // Status and control signals
   input         resetn,
   output        locked,
@@ -91,7 +93,7 @@ wire clk_in2_scalp_zynqps_sys_clock_0;
   //    * Unused outputs are labeled unused
 
   wire        clk_125_scalp_zynqps_sys_clock_0;
-  wire        clk_out2_scalp_zynqps_sys_clock_0;
+  wire        clk_500_scalp_zynqps_sys_clock_0;
   wire        clk_out3_scalp_zynqps_sys_clock_0;
   wire        clk_out4_scalp_zynqps_sys_clock_0;
   wire        clk_out5_scalp_zynqps_sys_clock_0;
@@ -106,7 +108,6 @@ wire clk_in2_scalp_zynqps_sys_clock_0;
   wire        clkfbout_buf_scalp_zynqps_sys_clock_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
-   wire clkout1_unused;
    wire clkout1b_unused;
    wire clkout2_unused;
    wire clkout2b_unused;
@@ -132,6 +133,10 @@ wire clk_in2_scalp_zynqps_sys_clock_0;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
+    .CLKOUT1_DIVIDE       (4),
+    .CLKOUT1_PHASE        (0.000),
+    .CLKOUT1_DUTY_CYCLE   (0.500),
+    .CLKOUT1_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (8.000))
   mmcm_adv_inst
     // Output clocks
@@ -140,7 +145,7 @@ wire clk_in2_scalp_zynqps_sys_clock_0;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk_125_scalp_zynqps_sys_clock_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clkout1_unused),
+    .CLKOUT1             (clk_500_scalp_zynqps_sys_clock_0),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -195,6 +200,10 @@ wire clk_in2_scalp_zynqps_sys_clock_0;
    (.O   (clk_125),
     .I   (clk_125_scalp_zynqps_sys_clock_0));
 
+
+  BUFG clkout2_buf
+   (.O   (clk_500),
+    .I   (clk_500_scalp_zynqps_sys_clock_0));
 
 
 

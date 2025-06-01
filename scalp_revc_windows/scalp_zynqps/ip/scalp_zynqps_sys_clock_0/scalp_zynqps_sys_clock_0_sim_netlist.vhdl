@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon May 26 09:32:11 2025
+-- Date        : Sun Jun  1 16:02:21 2025
 -- Host        : Torchet running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0_sim_netlist.vhdl
@@ -18,6 +18,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity scalp_zynqps_sys_clock_0_clk_wiz is
   port (
     clk_125 : out STD_LOGIC;
+    clk_500 : out STD_LOGIC;
     resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -26,6 +27,7 @@ end scalp_zynqps_sys_clock_0_clk_wiz;
 
 architecture STRUCTURE of scalp_zynqps_sys_clock_0_clk_wiz is
   signal clk_125_scalp_zynqps_sys_clock_0 : STD_LOGIC;
+  signal clk_500_scalp_zynqps_sys_clock_0 : STD_LOGIC;
   signal clk_in1_scalp_zynqps_sys_clock_0 : STD_LOGIC;
   signal clkfbout_buf_scalp_zynqps_sys_clock_0 : STD_LOGIC;
   signal clkfbout_scalp_zynqps_sys_clock_0 : STD_LOGIC;
@@ -34,7 +36,6 @@ architecture STRUCTURE of scalp_zynqps_sys_clock_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
@@ -50,6 +51,7 @@ architecture STRUCTURE of scalp_zynqps_sys_clock_0_clk_wiz is
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkin1_bufg : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -67,6 +69,11 @@ clkout1_buf: unisim.vcomponents.BUFG
       I => clk_125_scalp_zynqps_sys_clock_0,
       O => clk_125
     );
+clkout2_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_500_scalp_zynqps_sys_clock_0,
+      O => clk_500
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -79,7 +86,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 1,
+      CLKOUT1_DIVIDE => 4,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
@@ -129,7 +136,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
       CLKOUT0 => clk_125_scalp_zynqps_sys_clock_0,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED,
+      CLKOUT1 => clk_500_scalp_zynqps_sys_clock_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
@@ -169,6 +176,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity scalp_zynqps_sys_clock_0 is
   port (
     clk_125 : out STD_LOGIC;
+    clk_500 : out STD_LOGIC;
     resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -182,6 +190,7 @@ begin
 inst: entity work.scalp_zynqps_sys_clock_0_clk_wiz
      port map (
       clk_125 => clk_125,
+      clk_500 => clk_500,
       clk_in1 => clk_in1,
       locked => locked,
       resetn => resetn

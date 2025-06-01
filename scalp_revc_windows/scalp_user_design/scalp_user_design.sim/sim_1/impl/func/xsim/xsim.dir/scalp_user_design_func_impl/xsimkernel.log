@@ -1,0 +1,7 @@
+Running: xsim.dir/scalp_user_design_func_impl/xsimk.exe -simmode gui -wdb scalp_user_design_func_impl.wdb -simrunnum 0 -socket 51019
+Design successfully loaded
+Design Loading Memory Usage: 56556 KB (Peak: 56556 KB)
+Design Loading CPU Usage: 639 ms
+Simulation completed
+Simulation Memory Usage: 68184 KB (Peak: 68184 KB)
+Simulation CPU Usage: 749 ms

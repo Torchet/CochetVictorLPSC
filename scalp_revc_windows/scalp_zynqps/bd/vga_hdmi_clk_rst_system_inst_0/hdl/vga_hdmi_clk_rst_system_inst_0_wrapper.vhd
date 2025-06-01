@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
---Date        : Mon May 26 11:06:44 2025
+--Date        : Sun Jun  1 16:01:40 2025
 --Host        : Torchet running 64-bit major release  (build 9200)
 --Command     : generate_target vga_hdmi_clk_rst_system_inst_0_wrapper.bd
 --Design      : vga_hdmi_clk_rst_system_inst_0_wrapper

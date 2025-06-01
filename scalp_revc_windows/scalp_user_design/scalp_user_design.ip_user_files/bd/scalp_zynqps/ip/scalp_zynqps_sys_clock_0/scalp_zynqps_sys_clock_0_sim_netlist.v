@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Mon May 26 09:32:11 2025
+// Date        : Wed May 28 10:40:00 2025
 // Host        : Torchet running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0_sim_netlist.v
@@ -16,21 +16,25 @@
 (* NotValidForBitStream *)
 module scalp_zynqps_sys_clock_0
    (clk_125,
+    clk_500,
     resetn,
     locked,
     clk_in1);
   output clk_125;
+  output clk_500;
   input resetn;
   output locked;
   input clk_in1;
 
   wire clk_125;
+  wire clk_500;
   wire clk_in1;
   wire locked;
   wire resetn;
 
   scalp_zynqps_sys_clock_0_clk_wiz inst
        (.clk_125(clk_125),
+        .clk_500(clk_500),
         .clk_in1(clk_in1),
         .locked(locked),
         .resetn(resetn));
@@ -38,16 +42,20 @@ endmodule
 
 module scalp_zynqps_sys_clock_0_clk_wiz
    (clk_125,
+    clk_500,
     resetn,
     locked,
     clk_in1);
   output clk_125;
+  output clk_500;
   input resetn;
   output locked;
   input clk_in1;
 
   wire clk_125;
   wire clk_125_scalp_zynqps_sys_clock_0;
+  wire clk_500;
+  wire clk_500_scalp_zynqps_sys_clock_0;
   wire clk_in1;
   wire clk_in1_scalp_zynqps_sys_clock_0;
   wire clkfbout_buf_scalp_zynqps_sys_clock_0;
@@ -59,7 +67,6 @@ module scalp_zynqps_sys_clock_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -85,6 +92,10 @@ module scalp_zynqps_sys_clock_0_clk_wiz
        (.I(clk_125_scalp_zynqps_sys_clock_0),
         .O(clk_125));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout2_buf
+       (.I(clk_500_scalp_zynqps_sys_clock_0),
+        .O(clk_500));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT_F(8.000000),
@@ -96,7 +107,7 @@ module scalp_zynqps_sys_clock_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(2),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -145,7 +156,7 @@ module scalp_zynqps_sys_clock_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_125_scalp_zynqps_sys_clock_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(clk_500_scalp_zynqps_sys_clock_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

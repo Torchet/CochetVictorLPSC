@@ -88,7 +88,8 @@ module scalp_zynqps (
   Clk125xCO,
   SAxiMstCplxNumRegsClkxCO,
   SAxiMstCplxNumRegsRstxRANO,
-  VgaHdmiClkPllLockedxSO
+  VgaHdmiClkPllLockedxSO,
+  clk_500
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *)
@@ -295,6 +296,10 @@ module scalp_zynqps (
   output SAxiMstCplxNumRegsRstxRANO;
   (* X_INTERFACE_IGNORE = "true" *)
   output VgaHdmiClkPllLockedxSO;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_500 CLK" *)
+  (* X_INTERFACE_MODE = "master CLK.CLK_500" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_500, FREQ_HZ 500000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /sys_clock_clk_out1, INSERT_VIP 0" *)
+  output clk_500;
 
   // stub module has no contents
 

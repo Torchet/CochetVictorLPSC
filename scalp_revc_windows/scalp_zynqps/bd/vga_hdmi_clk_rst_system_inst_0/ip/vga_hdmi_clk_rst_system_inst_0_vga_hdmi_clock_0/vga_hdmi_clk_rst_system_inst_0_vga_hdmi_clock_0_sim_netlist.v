@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Mon May 26 09:32:10 2025
+// Date        : Sat May 31 19:20:39 2025
 // Host        : Torchet running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_sim_netlist.v
@@ -17,15 +17,18 @@
 module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0
    (clk_vga,
     clk_hdmi,
+    clk_500,
     resetn,
     locked,
     clk_in1);
   output clk_vga;
   output clk_hdmi;
+  output clk_500;
   input resetn;
   output locked;
   input clk_in1;
 
+  wire clk_500;
   wire clk_hdmi;
   wire clk_in1;
   wire clk_vga;
@@ -33,7 +36,8 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0
   wire resetn;
 
   vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz inst
-       (.clk_hdmi(clk_hdmi),
+       (.clk_500(clk_500),
+        .clk_hdmi(clk_hdmi),
         .clk_in1(clk_in1),
         .clk_vga(clk_vga),
         .locked(locked),
@@ -43,15 +47,19 @@ endmodule
 module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
    (clk_vga,
     clk_hdmi,
+    clk_500,
     resetn,
     locked,
     clk_in1);
   output clk_vga;
   output clk_hdmi;
+  output clk_500;
   input resetn;
   output locked;
   input clk_in1;
 
+  wire clk_500;
+  wire clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire clk_hdmi;
   wire clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire clk_in1;
@@ -68,7 +76,6 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -96,22 +103,26 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
        (.I(clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
         .O(clk_hdmi));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
+        .O(clk_500));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(48.000000),
+    .CLKFBOUT_MULT_F(46.375000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(8.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(25.000000),
+    .CLKOUT0_DIVIDE_F(20.125000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(5),
+    .CLKOUT1_DIVIDE(4),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(2),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -133,7 +144,7 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("BUF_IN"),
-    .DIVCLK_DIVIDE(5),
+    .DIVCLK_DIVIDE(6),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),
@@ -158,7 +169,7 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),

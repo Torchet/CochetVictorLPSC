@@ -7,6 +7,15 @@
 
 # XDC: imports/files/timing_constraints.xdc
 
+# Block Designs: bd/MandelCacl/MandelCacl.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MandelCacl || ORIG_REF_NAME==MandelCacl} -quiet] -quiet
+
+# IP: bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/MandelCacl_xpm_cdc_gen_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MandelCacl_xpm_cdc_gen_0_1 || ORIG_REF_NAME==MandelCacl_xpm_cdc_gen_0_1} -quiet] -quiet
+
+# IP: ip/mem0/mem0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mem0 || ORIG_REF_NAME==mem0} -quiet] -quiet
+
 # Block Designs: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/scalp_zynqps.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps || ORIG_REF_NAME==scalp_zynqps} -quiet] -quiet
 
@@ -21,9 +30,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqp
 
 # IP: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0 || ORIG_REF_NAME==scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0} -quiet] -quiet
-
-# IP: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0 || ORIG_REF_NAME==scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0} -quiet] -quiet
 
 # IP: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_0/scalp_zynqps_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps_ps7_0_axi_periph_0 || ORIG_REF_NAME==scalp_zynqps_ps7_0_axi_periph_0} -quiet] -quiet
@@ -57,5 +63,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqp
 
 # IP: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps_axi_gpio_joystick_0 || ORIG_REF_NAME==scalp_zynqps_axi_gpio_joystick_0} -quiet] -quiet
+
+# IP: c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0 || ORIG_REF_NAME==scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0} -quiet] -quiet
+
+# XDC: c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/MandelCacl_ooc.xdc
 
 # XDC: C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/scalp_zynqps_ooc.xdc

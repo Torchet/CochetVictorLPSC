@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon May 26 09:32:22 2025
+-- Date        : Mon May 26 09:32:21 2025
 -- Host        : Torchet running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_iic_ioext_0/scalp_zynqps_axi_iic_ioext_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top scalp_zynqps_axi_iic_ioext_0 -prefix
+--               scalp_zynqps_axi_iic_ioext_0_ scalp_zynqps_axi_iic_ioext_0_sim_netlist.vhdl
 -- Design      : scalp_zynqps_axi_iic_ioext_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,8 +37,6 @@ entity scalp_zynqps_axi_iic_ioext_0_SRL_FIFO is
     Rc_fifo_wr_d : in STD_LOGIC;
     Rc_fifo_wr : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_SRL_FIFO : entity is "SRL_FIFO";
 end scalp_zynqps_axi_iic_ioext_0_SRL_FIFO;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_SRL_FIFO is
@@ -1286,8 +1284,6 @@ entity scalp_zynqps_axi_iic_ioext_0_address_decoder is
     gpo : in STD_LOGIC_VECTOR ( 0 to 0 );
     AXI_IP2Bus_WrAck2_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_address_decoder : entity is "address_decoder";
 end scalp_zynqps_axi_iic_ioext_0_address_decoder;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_address_decoder is
@@ -2684,8 +2680,6 @@ entity scalp_zynqps_axi_iic_ioext_0_cdc_sync is
     sda_i : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_cdc_sync : entity is "cdc_sync";
 end scalp_zynqps_axi_iic_ioext_0_cdc_sync;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_cdc_sync is
@@ -2906,8 +2900,6 @@ entity scalp_zynqps_axi_iic_ioext_0_dynamic_master is
     Tx_fifo_rd : in STD_LOGIC;
     earlyAckHdr : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_dynamic_master : entity is "dynamic_master";
 end scalp_zynqps_axi_iic_ioext_0_dynamic_master;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_dynamic_master is
@@ -3294,8 +3286,6 @@ entity scalp_zynqps_axi_iic_ioext_0_interrupt_control is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_interrupt_control : entity is "interrupt_control";
 end scalp_zynqps_axi_iic_ioext_0_interrupt_control;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_interrupt_control is
@@ -3636,8 +3626,6 @@ entity scalp_zynqps_axi_iic_ioext_0_reg_interface is
     \cr_i_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \IIC2Bus_IntrEvent_reg[0]_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_reg_interface : entity is "reg_interface";
 end scalp_zynqps_axi_iic_ioext_0_reg_interface;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_reg_interface is
@@ -5674,8 +5662,6 @@ entity scalp_zynqps_axi_iic_ioext_0_shift8 is
     s_axi_aclk : in STD_LOGIC;
     \data_int_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_shift8 : entity is "shift8";
 end scalp_zynqps_axi_iic_ioext_0_shift8;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_shift8 is
@@ -6118,8 +6104,6 @@ entity scalp_zynqps_axi_iic_ioext_0_soft_reset is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Tx_fifo_rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_soft_reset : entity is "soft_reset";
 end scalp_zynqps_axi_iic_ioext_0_soft_reset;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_soft_reset is
@@ -6323,8 +6307,6 @@ entity scalp_zynqps_axi_iic_ioext_0_upcnt_n is
     \q_int_reg[10]_0\ : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_upcnt_n : entity is "upcnt_n";
 end scalp_zynqps_axi_iic_ioext_0_upcnt_n;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_upcnt_n is
@@ -7452,8 +7434,6 @@ entity scalp_zynqps_axi_iic_ioext_0_debounce is
     scl_i : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_debounce : entity is "debounce";
 end scalp_zynqps_axi_iic_ioext_0_debounce;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_debounce is
@@ -7571,8 +7551,6 @@ entity scalp_zynqps_axi_iic_ioext_0_iic_control is
     \FSM_sequential_state_reg[2]_1\ : in STD_LOGIC;
     \FSM_onehot_scl_state_reg[7]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_iic_control : entity is "iic_control";
 end scalp_zynqps_axi_iic_ioext_0_iic_control;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_iic_control is
@@ -9723,8 +9701,6 @@ entity scalp_zynqps_axi_iic_ioext_0_slave_attachment is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     gpo : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_slave_attachment : entity is "slave_attachment";
 end scalp_zynqps_axi_iic_ioext_0_slave_attachment;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_slave_attachment is
@@ -11454,8 +11430,6 @@ entity scalp_zynqps_axi_iic_ioext_0_axi_lite_ipif is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     gpo : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end scalp_zynqps_axi_iic_ioext_0_axi_lite_ipif;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_axi_lite_ipif is
@@ -11584,8 +11558,6 @@ entity scalp_zynqps_axi_iic_ioext_0_filter is
     s_axi_aclk : in STD_LOGIC;
     sda_i : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_filter : entity is "filter";
 end scalp_zynqps_axi_iic_ioext_0_filter;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_filter is
@@ -11675,8 +11647,6 @@ entity scalp_zynqps_axi_iic_ioext_0_axi_ipif_ssp1 is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     gpo : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_axi_ipif_ssp1 : entity is "axi_ipif_ssp1";
 end scalp_zynqps_axi_iic_ioext_0_axi_ipif_ssp1;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_axi_ipif_ssp1 is
@@ -11934,8 +11904,6 @@ entity scalp_zynqps_axi_iic_ioext_0_iic is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_iic : entity is "iic";
 end scalp_zynqps_axi_iic_ioext_0_iic;
 
 architecture STRUCTURE of scalp_zynqps_axi_iic_ioext_0_iic is
@@ -12744,8 +12712,6 @@ entity scalp_zynqps_axi_iic_ioext_0_axi_iic is
   attribute C_TEN_BIT_ADR of scalp_zynqps_axi_iic_ioext_0_axi_iic : entity is 0;
   attribute C_TIMING_REG_WIDTH : integer;
   attribute C_TIMING_REG_WIDTH of scalp_zynqps_axi_iic_ioext_0_axi_iic : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_iic_ioext_0_axi_iic : entity is "axi_iic";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of scalp_zynqps_axi_iic_ioext_0_axi_iic : entity is "yes";
 end scalp_zynqps_axi_iic_ioext_0_axi_iic;

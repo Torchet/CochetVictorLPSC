@@ -56,7 +56,13 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 1
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 5
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param bd.open.in_stealth_mode 2
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -78,7 +84,7 @@ set_property ip_output_repo c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_de
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0.xci
+read_ip -quiet C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0.xci
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

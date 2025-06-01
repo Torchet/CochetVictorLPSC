@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
---Date        : Mon May 26 11:06:41 2025
+--Date        : Sun Jun  1 16:01:37 2025
 --Host        : Torchet running 64-bit major release  (build 9200)
 --Command     : generate_target scalp_zynqps_wrapper.bd
 --Design      : scalp_zynqps_wrapper
@@ -92,7 +92,8 @@ entity scalp_zynqps_wrapper is
     aximm_mst_firmwareid_if_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     aximm_mst_firmwareid_if_wready : in STD_LOGIC;
     aximm_mst_firmwareid_if_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    aximm_mst_firmwareid_if_wvalid : out STD_LOGIC
+    aximm_mst_firmwareid_if_wvalid : out STD_LOGIC;
+    clk_500 : out STD_LOGIC
   );
 end scalp_zynqps_wrapper;
 
@@ -181,7 +182,8 @@ architecture STRUCTURE of scalp_zynqps_wrapper is
     Clk125xCO : out STD_LOGIC;
     SAxiMstCplxNumRegsClkxCO : out STD_LOGIC;
     SAxiMstCplxNumRegsRstxRANO : out STD_LOGIC;
-    VgaHdmiClkPllLockedxSO : out STD_LOGIC
+    VgaHdmiClkPllLockedxSO : out STD_LOGIC;
+    clk_500 : out STD_LOGIC
   );
   end component scalp_zynqps;
   component IOBUF is
@@ -297,6 +299,7 @@ scalp_zynqps_i: component scalp_zynqps
       aximm_mst_firmwareid_if_wdata(31 downto 0) => aximm_mst_firmwareid_if_wdata(31 downto 0),
       aximm_mst_firmwareid_if_wready => aximm_mst_firmwareid_if_wready,
       aximm_mst_firmwareid_if_wstrb(3 downto 0) => aximm_mst_firmwareid_if_wstrb(3 downto 0),
-      aximm_mst_firmwareid_if_wvalid => aximm_mst_firmwareid_if_wvalid
+      aximm_mst_firmwareid_if_wvalid => aximm_mst_firmwareid_if_wvalid,
+      clk_500 => clk_500
     );
 end STRUCTURE;

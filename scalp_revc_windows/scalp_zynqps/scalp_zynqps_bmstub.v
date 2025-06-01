@@ -88,7 +88,8 @@ module scalp_zynqps (
   Clk125xCO,
   SAxiMstCplxNumRegsClkxCO,
   SAxiMstCplxNumRegsRstxRANO,
-  VgaHdmiClkPllLockedxSO
+  VgaHdmiClkPllLockedxSO,
+  clk_500
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *)
@@ -257,11 +258,11 @@ module scalp_zynqps (
   output SAxiMstFirmwareIdRstxRANO;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKVGAXCO CLK" *)
   (* X_INTERFACE_MODE = "master CLK.CLKVGAXCO" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKVGAXCO, FREQ_HZ 48000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1, INSERT_VIP 0" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKVGAXCO, FREQ_HZ 48007246, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1, INSERT_VIP 0" *)
   output ClkVgaxCO;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKHDMIXCO CLK" *)
   (* X_INTERFACE_MODE = "master CLK.CLKHDMIXCO" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKHDMIXCO, FREQ_HZ 240000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1, INSERT_VIP 0" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKHDMIXCO, FREQ_HZ 241536458, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /vga_hdmi_clk_rst_sys_0/vga_hdmi_clock_clk_out1, INSERT_VIP 0" *)
   output ClkHdmixCO;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.CLKVGARSTXRO RST" *)
   (* X_INTERFACE_MODE = "master RST.CLKVGARSTXRO" *)
@@ -295,6 +296,10 @@ module scalp_zynqps (
   output SAxiMstCplxNumRegsRstxRANO;
   (* X_INTERFACE_IGNORE = "true" *)
   output VgaHdmiClkPllLockedxSO;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_500 CLK" *)
+  (* X_INTERFACE_MODE = "master CLK.CLK_500" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_500, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /sys_clock_clk_out1, INSERT_VIP 0" *)
+  output clk_500;
 
   // stub module has no contents
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 26 11:06:43 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jun  1 16:01:39 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="hepia-cores.ch:scalp_node:part0:0.2" DEVICE="7z015" NAME="bd_c0d9" PACKAGE="clg485" SPEEDGRADE="-2"/>
 

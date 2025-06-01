@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="12"></ZoomEndTime>
+      <Cursor1Time time="11,600"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="389"></NameColumnWidth>
+      <ValueColumnWidth column_width="346"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIm2OutPxD" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIm2OutPxD[27:12]</obj_property>
+      <obj_property name="ObjectShortName">ZIm2OutPxD[27:12]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_0</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_1" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_1</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_1</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_2" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_2</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_20" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_20</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_20</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_21" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_21</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_21</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_22" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_22</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_22</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_23" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_23</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_23</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_24" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_24</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_24</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_25" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_25</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_25</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_26" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_26</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_26</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_27" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_27</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_27</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_28" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_28</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_28</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_29" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_29</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_29</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_3" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_3</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_3</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_30" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_30</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_30</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIM2_n_31" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIM2_n_31</obj_property>
+      <obj_property name="ObjectShortName">ZIM2_n_31</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/FinishedxO" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/FinishedxO</obj_property>
+      <obj_property name="ObjectShortName">FinishedxO</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

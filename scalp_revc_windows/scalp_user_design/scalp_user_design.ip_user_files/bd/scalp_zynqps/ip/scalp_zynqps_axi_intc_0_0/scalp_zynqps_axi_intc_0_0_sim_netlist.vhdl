@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon May 26 09:32:14 2025
+-- Date        : Mon May 26 09:32:13 2025
 -- Host        : Torchet running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top scalp_zynqps_axi_intc_0_0 -prefix
+--               scalp_zynqps_axi_intc_0_0_ scalp_zynqps_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : scalp_zynqps_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,8 +70,6 @@ entity scalp_zynqps_axi_intc_0_0_address_decoder is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     Bus_RNW_reg_reg_6 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_intc_0_0_address_decoder : entity is "address_decoder";
 end scalp_zynqps_axi_intc_0_0_address_decoder;
 
 architecture STRUCTURE of scalp_zynqps_axi_intc_0_0_address_decoder is
@@ -957,8 +955,6 @@ entity scalp_zynqps_axi_intc_0_0_intc_core is
     intr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_intc_0_0_intc_core : entity is "intc_core";
 end scalp_zynqps_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of scalp_zynqps_axi_intc_0_0_intc_core is
@@ -1535,8 +1531,6 @@ entity scalp_zynqps_axi_intc_0_0_slave_attachment is
     p_0_in5_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_intc_0_0_slave_attachment : entity is "slave_attachment";
 end scalp_zynqps_axi_intc_0_0_slave_attachment;
 
 architecture STRUCTURE of scalp_zynqps_axi_intc_0_0_slave_attachment is
@@ -2417,8 +2411,6 @@ entity scalp_zynqps_axi_intc_0_0_axi_lite_ipif is
     p_0_in5_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_intc_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end scalp_zynqps_axi_intc_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of scalp_zynqps_axi_intc_0_0_axi_lite_ipif is
@@ -2578,8 +2570,6 @@ entity scalp_zynqps_axi_intc_0_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of scalp_zynqps_axi_intc_0_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of scalp_zynqps_axi_intc_0_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_axi_intc_0_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of scalp_zynqps_axi_intc_0_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;

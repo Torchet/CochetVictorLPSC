@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1748244653">
+<GenRun Id="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1748711995">
   <File Type="REPORTS-TCL" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_reports.tcl"/>
   <File Type="RDS-UTIL" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_utilization_synth.pb"/>

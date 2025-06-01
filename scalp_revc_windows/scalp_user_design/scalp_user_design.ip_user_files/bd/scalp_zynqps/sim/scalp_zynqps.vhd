@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
---Date        : Mon May 26 11:06:41 2025
+--Date        : Thu May 29 16:44:51 2025
 --Host        : Torchet running 64-bit major release  (build 9200)
 --Command     : generate_target scalp_zynqps.bd
 --Design      : scalp_zynqps
@@ -1868,10 +1868,11 @@ entity scalp_zynqps is
     aximm_mst_firmwareid_if_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     aximm_mst_firmwareid_if_wready : in STD_LOGIC;
     aximm_mst_firmwareid_if_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    aximm_mst_firmwareid_if_wvalid : out STD_LOGIC
+    aximm_mst_firmwareid_if_wvalid : out STD_LOGIC;
+    clk_500 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of scalp_zynqps : entity is "scalp_zynqps,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=scalp_zynqps,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=28,numReposBlks=18,numNonXlnxBlks=2,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of scalp_zynqps : entity is "scalp_zynqps,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=scalp_zynqps,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=28,numReposBlks=18,numNonXlnxBlks=2,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of scalp_zynqps : entity is "scalp_zynqps.hwdef";
 end scalp_zynqps;
@@ -2171,6 +2172,7 @@ architecture STRUCTURE of scalp_zynqps is
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
     clk_125 : out STD_LOGIC;
+    clk_500 : out STD_LOGIC;
     locked : out STD_LOGIC
   );
   end component scalp_zynqps_sys_clock_0;
@@ -2477,6 +2479,8 @@ architecture STRUCTURE of scalp_zynqps is
   attribute X_INTERFACE_INFO of aximm_mst_firmwareid_if_rvalid : signal is "xilinx.com:interface:aximm:1.0 aximm_mst_firmwareid_if RVALID";
   attribute X_INTERFACE_INFO of aximm_mst_firmwareid_if_wready : signal is "xilinx.com:interface:aximm:1.0 aximm_mst_firmwareid_if WREADY";
   attribute X_INTERFACE_INFO of aximm_mst_firmwareid_if_wvalid : signal is "xilinx.com:interface:aximm:1.0 aximm_mst_firmwareid_if WVALID";
+  attribute X_INTERFACE_INFO of clk_500 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_500 CLK";
+  attribute X_INTERFACE_PARAMETER of clk_500 : signal is "XIL_INTERFACENAME CLK.CLK_500, CLK_DOMAIN /sys_clock_clk_out1, FREQ_HZ 500000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of Clk125RstxRNAO : signal is "xilinx.com:signal:reset:1.0 RST.CLK125RSTXRNAO RST";
   attribute X_INTERFACE_PARAMETER of Clk125RstxRNAO : signal is "XIL_INTERFACENAME RST.CLK125RSTXRNAO, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of Clk125RstxRO : signal is "xilinx.com:signal:reset:1.0 RST.CLK125RSTXRO RST";
@@ -3014,6 +3018,7 @@ scalp_axi_link_firmwareid: component scalp_zynqps_scalp_axi_link_firmwareid_0
 sys_clock: component scalp_zynqps_sys_clock_0
      port map (
       clk_125 => sys_clock_clk_126,
+      clk_500 => clk_500,
       clk_in1 => processing_system7_0_FCLK_CLK0,
       locked => \^clk125plllockedxs\,
       resetn => processing_system7_0_FCLK_RESET0_N

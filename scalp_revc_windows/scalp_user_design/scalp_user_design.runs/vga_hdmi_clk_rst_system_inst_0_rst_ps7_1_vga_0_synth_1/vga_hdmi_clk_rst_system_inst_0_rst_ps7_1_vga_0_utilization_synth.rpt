@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Mon May 26 09:32:12 2025
+| Date         : Sat May 31 19:20:40 2025
 | Host         : Torchet running 64-bit major release  (build 9200)
 | Command      : report_utilization -file vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_utilization_synth.rpt -pb vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_utilization_synth.pb
 | Design       : vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0

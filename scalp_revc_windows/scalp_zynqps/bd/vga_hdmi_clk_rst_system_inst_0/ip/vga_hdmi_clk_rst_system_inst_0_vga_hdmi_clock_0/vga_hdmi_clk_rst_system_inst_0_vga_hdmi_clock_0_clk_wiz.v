@@ -53,8 +53,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _clk_vga__48.00000______0.000______50.0______197.699____222.305
-// clk_hdmi__240.00000______0.000______50.0______157.195____222.305
+// _clk_vga__48.00725______0.000______50.0______274.743____283.970
+// clk_hdmi__241.53646______0.000______50.0______213.745____283.970
+// _clk_500__483.07292______0.000______50.0______193.389____283.970
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -69,6 +70,7 @@ module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
   // Clock out ports
   output        clk_vga,
   output        clk_hdmi,
+  output        clk_500,
   // Status and control signals
   input         resetn,
   output        locked,
@@ -94,7 +96,7 @@ wire clk_in2_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
 
   wire        clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire        clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
-  wire        clk_out3_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
+  wire        clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire        clk_out4_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire        clk_out5_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire        clk_out6_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
@@ -109,7 +111,6 @@ wire clk_in2_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -125,18 +126,22 @@ wire clk_in2_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT_F      (48.000),
+    .DIVCLK_DIVIDE        (6),
+    .CLKFBOUT_MULT_F      (46.375),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (25.000),
+    .CLKOUT0_DIVIDE_F     (20.125),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (5),
+    .CLKOUT1_DIVIDE       (4),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
+    .CLKOUT2_DIVIDE       (2),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (8.000))
   mmcm_adv_inst
     // Output clocks
@@ -147,7 +152,7 @@ wire clk_in2_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -204,6 +209,10 @@ wire clk_in2_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0;
   BUFG clkout2_buf
    (.O   (clk_hdmi),
     .I   (clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0));
+
+  BUFG clkout3_buf
+   (.O   (clk_500),
+    .I   (clk_500_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0));
 
 
 

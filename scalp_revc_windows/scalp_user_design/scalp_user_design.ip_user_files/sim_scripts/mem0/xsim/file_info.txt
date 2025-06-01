@@ -1,0 +1,2 @@
+mem0.v,verilog,xil_defaultlib,../../../../scalp_user_design.gen/sources_1/ip/mem0/sim/mem0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

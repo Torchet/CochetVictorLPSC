@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="vga_hdmi_clk_rst_system_inst_0" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1748250405"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1748250405"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1748250405"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1748250405"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1748786500"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1748786500"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1748786500"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1748786500"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\vga_hdmi_clk_rst_system_inst_0.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

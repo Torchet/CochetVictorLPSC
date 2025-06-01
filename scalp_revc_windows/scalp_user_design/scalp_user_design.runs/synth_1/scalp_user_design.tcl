@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 5
+set_param bd.open.in_stealth_mode 2
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z015clg485-2
@@ -78,11 +79,9 @@ set_property ip_output_repo c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_de
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -vhdl2008 -library scalp_lib {
-  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_axi_pkg.vhd
-  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi_pkg.vhd
-}
+read_vhdl -library xil_defaultlib c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/hdl/MandelCacl_wrapper.vhd
 read_vhdl -vhdl2008 -library xil_defaultlib {
+  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd
   C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd
   C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd
   C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd
@@ -96,10 +95,21 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd
   C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd
 }
+read_vhdl -vhdl2008 -library scalp_lib {
+  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_axi_pkg.vhd
+  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi_pkg.vhd
+}
+add_files C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/bd/MandelCacl/MandelCacl.bd
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/synth/MandelCacl_xpm_cdc_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/MandelCacl_xpm_cdc_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/MandelCacl_ooc.xdc]
+
+read_ip -quiet c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/mem0/mem0.xci
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/ip/mem0/mem0_ooc.xdc]
+
 add_files C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/scalp_zynqps.bd
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0.xdc]
@@ -126,6 +136,7 @@ set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/sc
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0.xdc]
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/scalp_zynqps_ooc.xdc]
 
 add_files C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/vga_hdmi_clk_rst_system_inst_0.bd
@@ -139,6 +150,9 @@ set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/sc
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0.xdc]
 set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/vga_hdmi_clk_rst_system_inst_0_ooc.xdc]
+
+read_ip -quiet c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -166,7 +180,7 @@ read_checkpoint -auto_incremental -incremental C:/CochetVictorLPSC/scalp_revc_wi
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top scalp_user_design -part xc7z015clg485-2
+synth_design -top scalp_user_design -part xc7z015clg485-2 -shreg_min_size 1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

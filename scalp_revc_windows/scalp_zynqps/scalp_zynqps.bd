@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFE3D591FE748C4CA",
+      "boundary_crc": "0xA2B3824D15FD57CE",
       "device": "xc7z015clg485-2",
       "name": "scalp_zynqps",
       "pfm_name": "hepia:scalp:scalp_zynq_user_pltfm:1.0",
@@ -790,7 +790,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "48000000",
+            "value": "48007246",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -816,7 +816,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "240000000",
+            "value": "241536458",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -971,6 +971,32 @@
       },
       "VgaHdmiClkPllLockedxSO": {
         "direction": "O"
+      },
+      "clk_500": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/sys_clock_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "250000000",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -3980,7 +4006,7 @@
                 "value_src": "ip_prop"
               },
               "FREQ_HZ": {
-                "value": "240000000",
+                "value": "241536458",
                 "value_src": "ip_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -4042,7 +4068,7 @@
                 "value_src": "ip_prop"
               },
               "FREQ_HZ": {
-                "value": "48000000",
+                "value": "48007246",
                 "value_src": "ip_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -4089,7 +4115,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "125000000",
+                "value": "1.25e+08",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -4112,7 +4138,7 @@
         "variant_info": {
           "vga_hdmi_clk_rst_system.bd": {
             "scoped_diagram": "vga_hdmi_clk_rst_system_inst_0.bd",
-            "design_checksum": "0xBCBD3E3389C8C51B",
+            "design_checksum": "0xF8CEE66489C8C51B",
             "ref_name": "vga_hdmi_clk_rst_system",
             "ref_subinst_path": "scalp_zynqps_vga_hdmi_clk_rst_system_0",
             "ref_type": "Block Design",
@@ -4151,16 +4177,16 @@
             "value": "true"
           },
           "CLKOUT2_JITTER": {
-            "value": "149.891"
+            "value": "104.759"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "95.888"
+            "value": "96.948"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "100.000"
+            "value": "250"
           },
           "CLKOUT2_USED": {
-            "value": "false"
+            "value": "true"
           },
           "CLKOUT3_JITTER": {
             "value": "100.399"
@@ -4190,13 +4216,16 @@
             "value": "clk_125"
           },
           "CLK_OUT2_PORT": {
-            "value": "clk_out2"
+            "value": "clk_500"
           },
           "CLK_OUT3_PORT": {
             "value": "clk_out3"
           },
           "CLK_OUT4_PORT": {
             "value": "clk_out4"
+          },
+          "ENABLE_CLOCK_MONITOR": {
+            "value": "false"
           },
           "MMCM_CLKFBOUT_MULT_F": {
             "value": "8.000"
@@ -4208,7 +4237,7 @@
             "value": "8.000"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "1"
+            "value": "4"
           },
           "MMCM_CLKOUT2_DIVIDE": {
             "value": "1"
@@ -4220,7 +4249,10 @@
             "value": "1"
           },
           "NUM_OUT_CLKS": {
-            "value": "1"
+            "value": "2"
+          },
+          "PRIMITIVE": {
+            "value": "MMCM"
           },
           "PRIM_SOURCE": {
             "value": "Global_buffer"
@@ -4230,10 +4262,13 @@
           },
           "RESET_TYPE": {
             "value": "ACTIVE_LOW"
+          },
+          "USE_DYN_PHASE_SHIFT": {
+            "value": "false"
           }
         },
         "pfm_attributes": {
-          "CLOCK": "clk_125 {id \"2\" is_default \"true\" proc_sys_reset \"/rst_ps7_0_125M\" status \"fixed\" freq_hz \"125000000\"}"
+          "CLOCK": "clk_125 {id \"2\" is_default \"true\" proc_sys_reset \"/rst_ps7_0_125M\" status \"fixed\" freq_hz \"125000000\"} clk_500 {id \"10\" is_default \"false\" proc_sys_reset \"/rst_ps7_0_125M\" status \"fixed\" freq_hz \"375000000\"}"
         }
       },
       "axi_iic_ioext": {
@@ -4531,6 +4566,12 @@
           "ps7_0_axi_periph/M06_ACLK",
           "rst_ps7_0_125M/slowest_sync_clk",
           "system_ila_0/clk"
+        ]
+      },
+      "sys_clock_clk_500": {
+        "ports": [
+          "sys_clock/clk_500",
+          "clk_500"
         ]
       },
       "sys_clock_locked": {

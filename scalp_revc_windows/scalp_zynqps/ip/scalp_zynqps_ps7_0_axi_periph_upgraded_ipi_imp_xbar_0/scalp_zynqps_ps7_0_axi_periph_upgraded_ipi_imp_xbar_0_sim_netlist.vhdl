@@ -2,10 +2,11 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon May 26 09:32:31 2025
+-- Date        : Mon May 26 09:32:30 2025
 -- Host        : Torchet running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0 -prefix
+--               scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_
+--               scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_sim_netlist.vhdl
 -- Design      : scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -90,8 +91,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_3
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_34_addr_arbiter_sasd";
 end scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_addr_arbiter_sasd;
 
 architecture STRUCTURE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_addr_arbiter_sasd is
@@ -1988,8 +1987,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_3
     mi_awvalid_en : in STD_LOGIC;
     p_4_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_decerr_slave : entity is "axi_crossbar_v2_1_34_decerr_slave";
 end scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_decerr_slave;
 
 architecture STRUCTURE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_decerr_slave is
@@ -2221,8 +2218,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_3
     \m_ready_d_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_splitter : entity is "axi_crossbar_v2_1_34_splitter";
 end scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_splitter;
 
 architecture STRUCTURE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_splitter is
@@ -2528,8 +2523,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_register_slice_
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_register_slice_v2_1_33_axic_register_slice : entity is "axi_register_slice_v2_1_33_axic_register_slice";
 end scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_register_slice_v2_1_33_axic_register_slice;
 
 architecture STRUCTURE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_register_slice_v2_1_33_axic_register_slice is
@@ -5125,8 +5118,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_3
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_crossbar_sasd : entity is "axi_crossbar_v2_1_34_crossbar_sasd";
 end scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_crossbar_sasd;
 
 architecture STRUCTURE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_crossbar_sasd is
@@ -5751,8 +5742,6 @@ entity scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_3
   attribute C_S_AXI_WRITE_ACCEPTANCE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "axi_crossbar_v2_1_34_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

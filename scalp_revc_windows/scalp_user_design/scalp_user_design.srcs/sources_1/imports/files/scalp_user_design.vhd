@@ -442,6 +442,7 @@ architecture arch of scalp_user_design is
     -- Clocks
     -- Processing system clock
     signal Clk125xC                : std_logic         := '0';
+    signal Clk500xC                : std_logic         := '0';
     -- Processing system pll locked
     signal Clk125PllLockedxS       : std_logic         := '0';
     -- Vga and Hdmi clocks
@@ -517,6 +518,7 @@ begin
                 -- Clk and rst (125Mhz)
                 HdmiVgaClocksxCO    => HdmiVgaClocksxC,
                 Clk125xCO           => Clk125xC,
+                clk_500xCO          => Clk500xC,
                 Clk125RstxRO        => Clk125RstxR,
                 Clk125RstxRNAO      => Clk125RstxRNA,
                 Clk125PllLockedxSO  => Clk125PllLockedxS,
@@ -816,13 +818,16 @@ begin
 
             constant C_AXI_CROSS_REGISTER : t_axi_register := (RegxD => x"00ffffff");
             constant C_AXI_BG_REGISTER    : t_axi_register := (RegxD => x"00ff0000");
-
+            constant SIZE : integer:=16;
+            constant IT_SIZE : integer:=24;
+            constant comma : integer:=12;
+            constant max_iter : integer:=100;
             -- Signals
             signal CDCPatternPortsxD : t_axi_bunch_of_registers(1 downto 0) := (0 => C_AXI_BG_REGISTER,
                                                                                 1 => C_AXI_CROSS_REGISTER);
             signal BramWAddrxD : std_logic_vector(8 downto 0) := (others => '0');
             signal BramRAddrxD : std_logic_vector(8 downto 0) := (others => '0');
-            signal BramAddrxD : std_logic_vector(8 downto 0) := (others => '0');
+            signal BramAddrxD : std_logic_vector(9 downto 0) := (others => '0');
             signal BramWexD   : std_logic_vector(3 downto 0) := (others => '1');
             -- Mandelbrot calculator clock
             signal MndlClk625xC                : std_logic         := '0';
@@ -834,17 +839,68 @@ begin
             signal MndlPllPwrDwn            : std_logic := '0';
 
             
-            TYPE MndelState IS (STARTUP,ROUGE,BLEU,VERT);
-            signal state: MndelState := ROUGE;
+            TYPE MndelState IS (STARTUP,WAIT_FIFO,PIXEL_SEQ);
+            signal state: MndelState := STARTUP;
+
+            TYPE BramManage IS (STARTUP,FILL_FIRST,FILL_2ND);
+            signal BramState: BramManage := STARTUP;
+
             signal next_state: MndelState;
             signal PixelMndxD          : t_hdmi_vga_pix                                        := C_HDMI_VGA_PIX_RED;
             signal PatterMndnPortsxD   : t_axi_bunch_of_registers(1 downto 0)                  := (others => C_AXI_REGISTER_IDLE);
 
-            signal EastFrontier         : integer range 1 to 720:=576;
-            signal WestFrontier         : integer range 1 to 720:=144;
+            signal PixHCntxD         : integer range 0 to 720:=0;
+            signal PixVCntxD         : integer range 0 to 720:=0;
 
             signal NorthFrontier         : integer range 1 to 720:=432;
             signal SouthFrontier         : integer range 1 to 720:=288;
+
+            signal ClkxCI         : std_logic;
+            signal BramRdClkxCI         : std_logic;
+            signal RstxS         : std_logic:='1';
+            signal RdyxS       : std_logic;
+            signal StartxS       : std_logic:='0';
+            signal FinishedxS    : std_logic;
+            signal FinishedxS_prev: std_logic;
+            signal CpixxD      : std_logic_vector (SIZE-1 downto 0):=(others => '0');
+            signal CpiyxD : std_logic_vector (SIZE-1 downto 0):=(others => '0');
+            signal IterxD : std_logic_vector (IT_SIZE-1 downto 0);
+            signal IterFifoxD : std_logic_vector (IT_SIZE-1 downto 0);
+            signal CDCIterxD : std_logic_vector (IT_SIZE-1 downto 0);
+            signal   FifoWrErrxD  : std_logic:='0';
+            signal   FifoRdErrxD  : std_logic:='0';
+            signal   FifoFullxD   : std_logic:='0';
+            signal   FifoWrEnxD   : std_logic:='0';
+            signal   FifoRdEnxD   : std_logic:='0';
+
+            signal   FifoAlmEptyxD   : std_logic:='0';
+            signal   FifoAlmFullxD   : std_logic:='0';
+            signal   FifoEptyxD   : std_logic:='0';
+            signal FifoWrtCntxD       :  std_logic_vector(8 downto 0):=(others => '0');
+            signal FifoRdtCntxD       :  std_logic_vector(8 downto 0):=(others => '0');
+            signal FifoRstxD : std_logic:='1';
+            signal StartMemRdxD : std_logic:='0';
+            signal FifoRstCntr : integer range 0 to 501:=0;
+
+            signal CDCPatternOut : std_logic_vector(23 downto 0);
+
+            signal Mem1AWEnxS : std_logic_vector(0 downto 0):=(others => '0');
+            signal Mem1AddrAxD  : std_logic_vector(15 downto 0);
+            signal Mem1DinAxD   : std_logic_vector(23 downto 0);
+            signal Mem1EnBxD    : std_logic:='0';
+            signal Mem1AddrBxD : std_logic_vector(15 downto 0);
+            signal Mem1OutB :  std_logic_vector(23 downto 0);
+
+            signal Mem2AWEnxS : std_logic_vector(0 downto 0):=(others => '0');
+            signal Mem2AddrAxD  : std_logic_vector(15 downto 0);
+            signal Mem2DinAxD   : std_logic_vector(23 downto 0);
+            signal Mem2EnBxD    : std_logic:='0';
+            signal Mem2AddrBxD : std_logic_vector(15 downto 0);
+            signal Mem2OutB :  std_logic_vector(23 downto 0);
+            signal MemFull : std_logic:='0';
+            signal CurrAddrWrxD : integer range 0 to 50000 := 0;
+            signal CurrAddrRdxD :  integer range 0 to 50000 := 0;     
+            signal CDCMemFull : std_logic_vector(0 downto 0):=(others => '0');
             -- Attributes
             attribute mark_debug : string;
             attribute keep       : string;
@@ -852,7 +908,7 @@ begin
             -- attribute mark_debug of CDCPatternPortsxD : signal is "true";
             -- attribute keep of CDCPatternPortsxD       : signal is "true";
             -- attribute mark_debug of BramAddrxD        : signal is "true";
-            -- attribute keep of BramAddrxD              : signal is "true";
+            --attribute keep of BramAddrxD              : signal is "true";
             -- attribute mark_debug of BramWexD          : signal is "true";
             -- attribute keep of BramWexD                : signal is "true";
 
@@ -860,7 +916,7 @@ begin
 
             BramSDPMacro1xI : BRAM_SDP_MACRO
                 generic map (
-                    BRAM_SIZE           => "18Kb",
+                    BRAM_SIZE           => "36Kb",
                     DEVICE              => "7SERIES",
                     WRITE_WIDTH         => 32,
                     READ_WIDTH          => 32,
@@ -872,7 +928,7 @@ begin
                     INIT                => X"000000000000000000")
                 port map (
                     DO     => CDCPatternPortsxD(0).RegxD,
-                    DI     => PatternPortsxD(0).RegxD,
+                    DI     => PatternPortsxD(1).RegxD,
                     RDADDR => BramAddrxD,
                     RDCLK  => HdmiVgaClocksxC.VgaxC,
                     RDEN   => '1',
@@ -885,7 +941,7 @@ begin
 
             BramSDPMacro2xI : BRAM_SDP_MACRO
                 generic map (
-                    BRAM_SIZE           => "18Kb",
+                    BRAM_SIZE           => "36Kb",
                     DEVICE              => "7SERIES",
                     WRITE_WIDTH         => 32,
                     READ_WIDTH          => 32,
@@ -897,7 +953,7 @@ begin
                     INIT                => X"000000000000000000")
                 port map (
                     DO     => CDCPatternPortsxD(1).RegxD,
-                    DI     => PatternPortsxD(0).RegxD,
+                    DI     => PatterMndnPortsxD(0).RegxD,
                     RDADDR => BramAddrxD,
                     RDCLK  => HdmiVgaClocksxC.VgaxC,
                     RDEN   => '1',
@@ -907,101 +963,121 @@ begin
                     WRADDR => BramAddrxD,
                     WRCLK  => ClpxNumRegsAxixD.ClockxC.ClkxC,
                     WREN   => '1');
-
-                -- PLLE2_BASE: Base Phase Locked Loop (PLL)
-                --             7 Series
-                -- Xilinx HDL Language Template, version 2024.2
-
-                PLLE2_BASE_inst : PLLE2_BASE
-                generic map (
-                BANDWIDTH => "OPTIMIZED",  -- OPTIMIZED, HIGH, LOW
-                CLKFBOUT_MULT => 7,        -- Multiply value for all CLKOUT, (2-64)
-                CLKFBOUT_PHASE => 0.0,     -- Phase offset in degrees of CLKFB, (-360.000-360.000).
-                CLKIN1_PERIOD => 8.0,      -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
-                -- CLKOUT0_DIVIDE - CLKOUT5_DIVIDE: Divide amount for each CLKOUT (1-128)
-                CLKOUT0_DIVIDE => 1,
-                --CLKOUT1_DIVIDE => 1,
-                --CLKOUT2_DIVIDE => 1,
-                --CLKOUT3_DIVIDE => 1,
-                --CLKOUT4_DIVIDE => 1,
-                --CLKOUT5_DIVIDE => 1,
-                -- CLKOUT0_DUTY_CYCLE - CLKOUT5_DUTY_CYCLE: Duty cycle for each CLKOUT (0.001-0.999).
-                CLKOUT0_DUTY_CYCLE => 0.5,
-                --CLKOUT1_DUTY_CYCLE => 0.5,
-                --CLKOUT2_DUTY_CYCLE => 0.5,
-                --CLKOUT3_DUTY_CYCLE => 0.5,
-                --CLKOUT4_DUTY_CYCLE => 0.5,
-                --CLKOUT5_DUTY_CYCLE => 0.5,
-                -- CLKOUT0_PHASE - CLKOUT5_PHASE: Phase offset for each CLKOUT (-360.000-360.000).
-                CLKOUT0_PHASE => 0.0,
-                --CLKOUT1_PHASE => 0.0,
-                --CLKOUT2_PHASE => 0.0,
-                --CLKOUT3_PHASE => 0.0,
-                --CLKOUT4_PHASE => 0.0,
-                --CLKOUT5_PHASE => 0.0,
-                DIVCLK_DIVIDE => 1,        -- Master division value, (1-56)
-                REF_JITTER1 => 0.0,        -- Reference input jitter in UI, (0.000-0.999).
-                STARTUP_WAIT => "FALSE"    -- Delay DONE until PLL Locks, ("TRUE"/"FALSE")
+            
+            MandelCalc : entity work.MndlCalc
+                generic map( 
+                    comma => comma, -- nombre de bits après la virgule
+                    max_iter => max_iter,
+                    SIZE => SIZE,
+                    IT_SIZE =>IT_SIZE
                 )
-                port map (
-                -- Clock Outputs: 1-bit (each) output: User configurable clock outputs
-                CLKOUT0 => MndlClk625xC,   -- 1-bit output: CLKOUT0
-                --CLKOUT1 => CLKOUT1,   -- 1-bit output: CLKOUT1
-                --CLKOUT2 => CLKOUT2,   -- 1-bit output: CLKOUT2
-                --CLKOUT3 => CLKOUT3,   -- 1-bit output: CLKOUT3
-                --CLKOUT4 => CLKOUT4,   -- 1-bit output: CLKOUT4
-                --CLKOUT5 => CLKOUT5,   -- 1-bit output: CLKOUT5
-                -- Feedback Clocks: 1-bit (each) output: Clock feedback ports
-                CLKFBOUT => MndlClk625FdbkxS, -- 1-bit output: Feedback clock
-                LOCKED => MndlClk625PllLockedxS,     -- 1-bit output: LOCK
-                CLKIN1 => Clk125xC,     -- 1-bit input: Input clock
-                -- Control Ports: 1-bit (each) input: PLL control ports
-                PWRDWN => '0',     -- 1-bit input: Power-down
-                RST => '1',           -- 1-bit input: Reset
-                -- Feedback Clocks: 1-bit (each) input: Clock feedback ports
-                CLKFBIN => MndlClk625FdbkxS    -- 1-bit input: Feedback clock
+                port map (ClkxI         => ClpxNumRegsAxixD.ClockxC.ClkxC,
+                        RstxI         => RstxS,
+                        RdyxO         => RdyxS,
+                        StartxI       => StartxS,
+                        FinishedxO    => FinishedxS,
+                        CpixxI        => CpixxD,
+                        CpixyI        => CpiyxD,
+                        IterxO        => IterxD,
+                        FifoAlmFullxI => FifoAlmFullxD
                 );
 
-                -- End of PLLE2_BASE_inst instantiation
-            ChangeColor : process(MndlClk625xC) is
+            Mem1 : entity work.blk_mem_gen_0 
+                port map(
+                    clka    => ClpxNumRegsAxixD.ClockxC.ClkxC,
+                    ena     => '1',
+                    wea     => Mem1AWEnxS,
+                    addra   => Mem1AddrAxD,
+                    dina    => Mem1DinAxD,
+                    clkb    => HdmiVgaClocksxC.VgaxC,
+                    enb     => Mem1EnBxD,
+                    addrb   => Mem1AddrBxD,
+                    doutb   => Mem1OutB
+                );
+
+            Mem2 : entity work.mem0 
+                port map(
+                    clka    => ClpxNumRegsAxixD.ClockxC.ClkxC,
+                    ena     => '1',
+                    wea     => Mem2AWEnxS,
+                    addra   => Mem2AddrAxD,
+                    dina    => Mem2DinAxD,
+                    clkb    => HdmiVgaClocksxC.VgaxC,
+                    enb     => Mem2EnBxD,
+                    addrb   => Mem2AddrBxD,
+                    doutb   => Mem2OutB
+                );
+            
+            SwitchSource : entity work.MandelCacl_wrapper
+                port map(
+                    Dest_Clk => HdmiVgaClocksxC.VgaxC,
+                    Dest_Out => CDCMemFull,
+                    Src_In   => MemFull,
+                    src_clk_1=> ClpxNumRegsAxixD.ClockxC.ClkxC
+                );
+
+            Rst : process(ClpxNumRegsAxixD.ClockxC.ClkxC ) is
             begin
-                if rising_edge(MndlClk625xC) then
-                        if BramWAddrxD < BramRAddrxD then 
-                            case state is
-                                when STARTUP         =>
-                                    --PatterMndnPortsxD(0).RegxD <= x"0ff00000";
-                                    state <= BLEU;
-                                when BLEU            =>
-                                    --PatterMndnPortsxD(0).RegxD <= x"00000ff0";
-                                    state <= VERT;
-                                when VERT        =>
-                                    --PatterMndnPortsxD(0).RegxD <= x"000ff000";
-                                    state <= ROUGE;
-                                when ROUGE     => 
-                                    --PatterMndnPortsxD(0).RegxD <= x"00f0f0f0";
-                                    state <= STARTUP;
-                            end case;
-                            --BramWAddrxD <= std_logic_vector(signed(BramWAddrxD)+1);
-                        end if;
+                if RstxS = '1' then
+                    BramState <= STARTUP;
+                    StartxS <= '0';
+                    RstxS <= '0';
+                elsif rising_edge(ClpxNumRegsAxixD.ClockxC.ClkxC) then
+                    case BramState is
+                        when STARTUP    =>
+                            StartxS <= '1';
+                            BramState <= FILL_FIRST;
+                        when FILL_FIRST =>
+                            Mem1AWEnxS <= "0";
+                            if FinishedxS = '1' then 
+                                Mem1AWEnxS <= "1";
+                                Mem1DinAxD <= IterxD;
+                                Mem1AddrAxD <= std_logic_vector(to_unsigned(CurrAddrWrxD,Mem1AddrAxD'length));
+                                CurrAddrWrxD <= CurrAddrWrxD + 1;
+                            elsif CurrAddrWrxD = 48400 then
+                                CurrAddrWrxD <= 0;
+                                MemFull <= '1';
+                                Mem1AWEnxS <= "0";
+                                BramState <= FILL_2ND;
+                            end if;
+                        when FILL_2ND   =>
 
-
+                    end case;
                 end if;
-            end process ChangeColor;
+            end process Rst;
 
             SwissFlagxP : process (HdmiVgaClocksxC.PllLockedxS,
                                    HdmiVgaClocksxC.VgaResetxRNA,
                                    HdmiVgaClocksxC.VgaxC) is
             begin  -- process SwissFlagxP
-                if (HdmiVgaClocksxC.PllLockedxS = '0') or (HdmiVgaClocksxC.VgaResetxRNA = '0') then
+                if (HdmiVgaClocksxC.PllLockedxS = '0') or (HdmiVgaClocksxC.VgaResetxRNA = '0' ) then
                     PixelxD <= C_HDMI_VGA_PIX_BLACK;
                 elsif rising_edge(HdmiVgaClocksxC.VgaxC) then
-                    if VgaPixCountersxD.VidOnxS = '1' then
-                        PatterMndnPortsxD(0).RegxD <= std_logic_vector(unsigned(PatterMndnPortsxD(0).RegxD) +32);
-                        PixelxD.RxD <= PatterMndnPortsxD(0).RegxD((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
-                        PixelxD.GxD <= PatterMndnPortsxD(0).RegxD(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
-                        PixelxD.BxD <= PatterMndnPortsxD(0).RegxD((C_VGA_PIXEL_SIZE - 1) downto 0);
+                        PixelxD <= C_HDMI_VGA_PIX_RED;
+
+                    if VgaPixCountersxD.VidOnxS = '1' and MemFull = '1' then 
+                            if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
+                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 470) then
+                            if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 250) and
+                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 470) then
+                                    Mem1EnBxD <= '1';
+                                    Mem1AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem1AddrBxD'length));
+                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
+                                    PixelxD.RxD <= Mem1OutB((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
+                                    PixelxD.GxD <= Mem1OutB(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
+                                    PixelxD.BxD <= Mem1OutB((C_VGA_PIXEL_SIZE - 1) downto 0);
+                                    --PixelxD <= Mem1OutB;
+                            end if;
+                        end if;
+                        if CurrAddrRdxD = 48400 then
+                            CurrAddrRdxD <= 0;
+                            Mem1EnBxD <= '0';
+                        end if;    
                     else
-                        --PixelxD <= C_HDMI_VGA_PIX_WHITE;
+                        Mem1EnBxD <= '0';
+                        --FifoRdEnxD <= '0';
+                        --NorthFrontier <= NorthFrontier +100 ;
+                        PixelxD <= C_HDMI_VGA_PIX_MAGENTA;
                     end if;
                 end if;
             end process SwissFlagxP;

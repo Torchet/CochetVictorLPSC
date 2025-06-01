@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1748326435" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/scalp_user_design.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1748806880" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/scalp_user_design.dcp">
   <File Type="PA-TCL" Name="scalp_user_design.tcl"/>
   <File Type="REPORTS-TCL" Name="scalp_user_design_reports.tcl"/>
   <File Type="RDS-RDS" Name="scalp_user_design.vds"/>
@@ -11,10 +11,36 @@
   <File Type="VDS-TIMING-PB" Name="scalp_user_design_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/MandelCacl/MandelCacl.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mem0/mem0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../scalp_zynqps/scalp_zynqps.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/MandelCacl/hdl/MandelCacl_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MndlCalc.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -201,6 +227,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/files/timing_constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -211,6 +238,8 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_2"/>
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
@@ -220,21 +249,25 @@
   </FileSet>
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-    <Step Id="synth_design"/>
+    <Step Id="synth_design">
+      <Option Id="ShregMinSize">1</Option>
+    </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_gpio_switches_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_scalp_axi_link_firmwareid_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_scalp_axi_link_cplx_num_regs_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_gpio_joystick_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_rst_ps7_0_125M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_gpio_reset_btn_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_gpio_joystick_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_rst_ps7_0_125M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_sys_clock_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_axi_iic_ioext_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0"/>
   <BlockFileSet Type="BlockSrcs" Name="scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MandelCacl_xpm_cdc_gen_0_1"/>
 </GenRun>
