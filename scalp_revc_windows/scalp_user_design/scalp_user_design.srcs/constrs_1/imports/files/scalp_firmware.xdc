@@ -316,3 +316,5 @@ set_property IOSTANDARD LVCMOS25 [get_ports SelfRstxRNO]
 
 
 
+
+

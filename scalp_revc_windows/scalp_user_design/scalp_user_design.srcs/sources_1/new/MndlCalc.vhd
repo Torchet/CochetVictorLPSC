@@ -57,6 +57,8 @@ end MndlCalc;
 architecture Behavioral of MndlCalc is
 
    signal StartxS : std_logic:= '1';
+   signal RdyxS   : std_logic:= '0';
+   signal CalcDone : std_logic:= '0';
    -- Initial position signal
    signal CaPixxD : std_logic_vector(SIZE-1 downto 0):=x"00FA"; 
    signal CbPixxD : std_logic_vector(SIZE-1 downto 0):=x"00FA";
@@ -74,7 +76,7 @@ architecture Behavioral of MndlCalc is
    signal Im_range : std_logic_vector(SIZE-1 downto 0):=x"0038"; 
    signal Im_Offset : std_logic_vector(SIZE-1 downto 0):=x"1800";
 
-   signal Re_range : std_logic_vector(SIZE-1 downto 0):=x"002F";  
+   signal Re_range : std_logic_vector(SIZE-1 downto 0):=x"002E";  
    signal Re_Offset : std_logic_vector(SIZE-1 downto 0):=x"1800"; 
 
    -- Initial position signal
@@ -439,7 +441,7 @@ begin
                   end if;
                when NEW_DATA        =>
                   if StartxS = '1' then
-
+                     RdyxS <= '0';
                      IterMan <= (others => '0');
                      ZaxD <= CaConvxD;
                      ZbxD <= CbConvxD;
@@ -468,19 +470,25 @@ begin
                      CaPixxD <= x"00FA";
                      if CbPixxD >=  x"01D6"  then
                         CbPixxD <=  x"00FA";
+                        CalcDone <= '1';
                      else
                         CbPixxD <= std_logic_vector(unsigned(CbPixxD)+1); 
                      end if;
                   else
                      CaPixxD <= std_logic_vector(unsigned(CaPixxD)+1);
                   end if;
-
-                  state <= DONE_WRITE;
-
+                  if CalcDone = '1' then
+                     state <= WAIT_MMRY; 
+                  else 
+                     state <= DONE_WRITE;
+                  end if;
                when DONE_WRITE =>
                   FinishedxS <= '0';
                   state <= NEW_DATA;
                when WAIT_MMRY  =>   
+                  RdyxS <= '1';
+                  CalcDone <= '0';
+                  FinishedxS <= '0';
                   if StartxS = '1' then
                      state <= NEW_DATA;
                   end if;  
@@ -490,6 +498,6 @@ begin
 
       end process MdndelSM;
 
-
+      RdyxO <= RdyxS;
       FinishedxO <= FinishedxS;
 end Behavioral;

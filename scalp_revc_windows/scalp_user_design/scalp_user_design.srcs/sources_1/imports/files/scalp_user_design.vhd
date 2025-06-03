@@ -472,6 +472,7 @@ architecture arch of scalp_user_design is
     signal VgaPixCountersxD : t_hdmi_vga_pix_counters                               := C_HDMI_VGA_PIX_COUNTERS_IDLE;
     signal PixelxD          : t_hdmi_vga_pix                                        := C_HDMI_VGA_PIX_RED;
     signal HdmiTxxD         : t_hdmi_tx;
+    signal VgaSyncxD        : t_hdmi_vga;
     ---------------------------------------------------------------------------
     -- GPIO Switches and Joystick
     ---------------------------------------------------------------------------
@@ -802,7 +803,8 @@ begin
                     ClocksxCI         => HdmiVgaClocksxC,
                     VgaPixCountersxDO => VgaPixCountersxD,
                     PixelxDI          => PixelxD,
-                    HdmiTxxDIO        => HdmiTxxD);
+                    HdmiTxxDIO        => HdmiTxxD,
+                    VgaSyncxO         => VgaSyncxD);
 
         end block HdmixB;
 
@@ -839,13 +841,12 @@ begin
             signal MndlPllPwrDwn            : std_logic := '0';
 
             
-            TYPE MndelState IS (STARTUP,WAIT_FIFO,PIXEL_SEQ);
-            signal state: MndelState := STARTUP;
+            TYPE DispCtrl IS (STARTUP,WAIT_SYNC,FIRST_SEQ,SCND_SEQ);
+            signal state: DispCtrl := STARTUP;
 
             TYPE BramManage IS (STARTUP,FILL_FIRST,FILL_2ND);
             signal BramState: BramManage := STARTUP;
 
-            signal next_state: MndelState;
             signal PixelMndxD          : t_hdmi_vga_pix                                        := C_HDMI_VGA_PIX_RED;
             signal PatterMndnPortsxD   : t_axi_bunch_of_registers(1 downto 0)                  := (others => C_AXI_REGISTER_IDLE);
 
@@ -982,11 +983,12 @@ begin
                                 Mem1DinAxD <= IterxD;
                                 Mem1AddrAxD <= std_logic_vector(to_unsigned(CurrAddrWrxD,Mem1AddrAxD'length));
                                 CurrAddrWrxD <= CurrAddrWrxD + 1;
-                            elsif CurrAddrWrxD = 48400 then
+                            elsif RdyxS = '1' then
                                 CurrAddrWrxD <= 0;
                                 MemFull <= "001";
                                 Mem1AWEnxS <= "0";
                                 StartxS <= '0';
+                                Mem1AddrAxD <= (others => '0');
                                 BramState <= FILL_2ND;
                             end if;
                         when FILL_2ND   =>
@@ -997,11 +999,12 @@ begin
                                 Mem2DinAxD <= IterxD;
                                 Mem2AddrAxD <= std_logic_vector(to_unsigned(CurrAddrWrxD,Mem2AddrAxD'length));
                                 CurrAddrWrxD <= CurrAddrWrxD + 1;
-                            elsif CurrAddrWrxD = 48400 then
+                            elsif RdyxS = '1' then
                                 CurrAddrWrxD <= 0;
                                 MemFull <= "010";
                                 Mem2AWEnxS <= "0";
                                 StartxS <= '0';
+                                Mem2AddrAxD <= (others => '0');
                                 BramState <= FILL_FIRST;
                             end if;
                     end case;
@@ -1016,46 +1019,49 @@ begin
                     PixelxD <= C_HDMI_VGA_PIX_BLACK;
                 elsif rising_edge(HdmiVgaClocksxC.VgaxC) then
                         PixelxD <= C_HDMI_VGA_PIX_RED;
+
                     if VgaPixCountersxD.VidOnxS = '1' and CDCMemFull = "001" then 
                         if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
-                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 470) then
+                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 472) then
                             if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 250) and
-                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 470) then
+                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 472) then
                                     Mem1EnBxD <= '1';
-                                    Mem1AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem1AddrBxD'length));
-                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
+
                                     PixelxD.RxD <= Mem1OutB((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
                                     PixelxD.GxD <= Mem1OutB(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
                                     PixelxD.BxD <= Mem1OutB((C_VGA_PIXEL_SIZE - 1) downto 0);
-                                    --PixelxD <= Mem1OutB;
+                                    Mem1AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem1AddrBxD'length));
+                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
                             end if;
                         end if;
-                        if CurrAddrRdxD = 48400 then
+                        if CurrAddrRdxD = 48841 then
                             CurrAddrRdxD <= 0;
                             Mem1EnBxD <= '0';
+                            Mem1AddrBxD <= (others => '0');
                         end if;    
                     elsif VgaPixCountersxD.VidOnxS = '1' and CDCMemFull = "010" then
                         PixelxD <= C_HDMI_VGA_PIX_RED;
                         if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
-                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 470) then
+                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 472) then
                             if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 250) and
-                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 470) then
+                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 472) then
                                     Mem2EnBxD <= '1';
-                                    Mem2AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem2AddrBxD'length));
-                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
+
                                     PixelxD.RxD <= Mem2OutB((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
                                     PixelxD.GxD <= Mem2OutB(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
                                     PixelxD.BxD <= Mem2OutB((C_VGA_PIXEL_SIZE - 1) downto 0);
-                                    --PixelxD <= Mem1OutB;
+                                    Mem2AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem2AddrBxD'length));
+                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
                             end if;
                         end if;
-                        if CurrAddrRdxD = 48400 then
+                        if CurrAddrRdxD = 48841 then
                             CurrAddrRdxD <= 0;
-                            Mem1EnBxD <= '0';
+                            Mem2EnBxD <= '0';
+                            Mem2AddrBxD <= (others => '0');
                         end if;
                     else 
-                        Mem1EnBxD <= '0';
-                        Mem2EnBxD <= '0';
+                        --Mem1EnBxD <= '0';
+                        --Mem2EnBxD <= '0';
                         --FifoRdEnxD <= '0';
                         --NorthFrontier <= NorthFrontier +100 ;
                         PixelxD <= C_HDMI_VGA_PIX_MAGENTA;

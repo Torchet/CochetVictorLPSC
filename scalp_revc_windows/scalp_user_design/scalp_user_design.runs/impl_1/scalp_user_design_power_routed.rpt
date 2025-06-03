@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Mon Jun  2 23:38:43 2025
+| Date             : Tue Jun  3 15:13:13 2025
 | Host             : Torchet running 64-bit major release  (build 9200)
 | Command          : report_power -file scalp_user_design_power_routed.rpt -pb scalp_user_design_power_summary_routed.pb -rpx scalp_user_design_power_routed.rpx
 | Design           : scalp_user_design
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.799        |
+| Total On-Chip Power (W)  | 1.800        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.672        |
+| Dynamic (W)              | 1.673        |
 | Device Static (W)        | 0.127        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 76.7         |
@@ -53,22 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.027 |        9 |       --- |             --- |
-| Slice Logic              |     0.006 |     9569 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     3161 |     46200 |            6.84 |
-|   Register               |    <0.001 |     4275 |     92400 |            4.63 |
+| Slice Logic              |     0.006 |     9561 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     3152 |     46200 |            6.82 |
+|   Register               |    <0.001 |     4273 |     92400 |            4.62 |
 |   CARRY4                 |    <0.001 |      102 |     11550 |            0.88 |
+|   F7/F8 Muxes            |    <0.001 |      116 |     46200 |            0.25 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     14400 |            0.17 |
 |   LUT as Shift Register  |    <0.001 |      140 |     14400 |            0.97 |
-|   F7/F8 Muxes            |    <0.001 |      116 |     46200 |            0.25 |
 |   Others                 |     0.000 |      850 |       --- |             --- |
-| Signals                  |     0.011 |     7436 |       --- |             --- |
-| Block RAM                |     0.007 |     69.5 |        95 |           73.16 |
+| Signals                  |     0.010 |     7430 |       --- |             --- |
+| Block RAM                |     0.010 |     69.5 |        95 |           73.16 |
 | MMCM                     |     0.226 |        2 |         3 |           66.67 |
-| DSPs                     |     0.015 |       14 |       160 |            8.75 |
+| DSPs                     |     0.014 |       14 |       160 |            8.75 |
 | I/O                      |     0.160 |       30 |       150 |           20.00 |
 | PS7                      |     1.219 |        1 |       --- |             --- |
 | Static Power             |     0.127 |          |           |                 |
-| Total                    |     1.799 |          |           |                 |
+| Total                    |     1.800 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.080 |       0.068 |      0.012 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.081 |       0.069 |      0.012 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.137 |       0.126 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.064 |       0.063 |      0.001 |       NA    | Unspecified | NA         |
@@ -160,33 +160,32 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| scalp_user_design                |     1.672 |
-|   PLxB.HdmixB.TxxI               |     0.160 |
+| scalp_user_design                |     1.673 |
+|   PLxB.HdmixB.TxxI               |     0.159 |
 |     Vga2HdmiConvertxB.Vga2HdmixI |     0.159 |
-|   PLxB.ImGenxB.MandelCalc        |     0.022 |
-|     A2mB2_Mult                   |     0.003 |
+|   PLxB.ImGenxB.MandelCalc        |     0.020 |
+|     A2mB2_Mult                   |     0.002 |
 |     AB_Mult                      |     0.002 |
-|     IterOut_Mult                 |     0.001 |
 |     Pix_X_Mult                   |     0.001 |
 |     Pix_X_Offset                 |     0.001 |
 |     Pix_Y_Mult                   |     0.001 |
 |     Pix_Y_Offset                 |     0.001 |
-|     ZIM                          |     0.001 |
+|     ZIM                          |     0.002 |
 |     ZIM2                         |     0.002 |
 |     ZIM_N1                       |     0.001 |
 |     ZRE                          |     0.001 |
 |     ZRE2                         |     0.001 |
 |     ZRE_N1                       |     0.001 |
-|   PLxB.ImGenxB.Mem1              |     0.004 |
-|     U0                           |     0.004 |
-|       inst_blk_mem_gen           |     0.004 |
-|   PLxB.ImGenxB.Mem2              |     0.004 |
-|     U0                           |     0.004 |
-|       inst_blk_mem_gen           |     0.004 |
+|   PLxB.ImGenxB.Mem1              |     0.006 |
+|     U0                           |     0.006 |
+|       inst_blk_mem_gen           |     0.006 |
+|   PLxB.ImGenxB.Mem2              |     0.006 |
+|     U0                           |     0.006 |
+|       inst_blk_mem_gen           |     0.006 |
 |   PLxB.ScalpClpxNumRegsxI        |     0.001 |
 |   PLxB.ScalpFirmwareIDxI         |     0.001 |
-|   PSxB.ZynqxI                    |     1.470 |
-|     PlatformxB.ScalpZynqPSxI     |     1.470 |
+|   PSxB.ZynqxI                    |     1.469 |
+|     PlatformxB.ScalpZynqPSxI     |     1.469 |
 |       axi_iic_ioext              |     0.003 |
 |       processing_system7_0       |     1.220 |
 |       ps7_0_axi_periph           |     0.007 |

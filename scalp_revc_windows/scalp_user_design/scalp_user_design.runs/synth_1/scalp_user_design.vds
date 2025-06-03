@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Jun  2 23:35:31 2025
-# Process ID         : 21832
+# Start of session at: Tue Jun  3 15:09:52 2025
+# Process ID         : 22728
 # Current directory  : C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1
 # Command line       : vivado.exe -log scalp_user_design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source scalp_user_design.tcl
 # Log file           : C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/scalp_user_design.vds
@@ -19,7 +19,7 @@
 # Host memory        : 33687 MB
 # Swap memory        : 4563 MB
 # Total Virtual      : 38250 MB
-# Available Virtual  : 14596 MB
+# Available Virtual  : 13153 MB
 #-----------------------------------------------------------
 source scalp_user_design.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -43,9 +43,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21724
+INFO: [Synth 8-7075] Helper process launched with PID 6724
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.922 ; gain = 469.555
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1142.426 ; gain = 469.770
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'scalp_user_design' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:309]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_wrapper' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:102]
@@ -67,23 +67,23 @@ INFO: [Synth 8-113] binding component instance 'IoExtIICSclxI' to cell 'IOBUF' [
 	Parameter SLEW bound to: FAST - type: string 
 INFO: [Synth 8-113] binding component instance 'IoExtIICSdaxI' to cell 'IOBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:132]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:1880]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_joystick_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:6' bound to instance 'axi_gpio_joystick' of component 'scalp_zynqps_axi_gpio_joystick_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2533]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_joystick_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_reset_btn_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:6' bound to instance 'axi_gpio_reset_btn' of component 'scalp_zynqps_axi_gpio_reset_btn_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2557]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_reset_btn_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_switches_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:6' bound to instance 'axi_gpio_switches' of component 'scalp_zynqps_axi_gpio_switches_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2580]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_switches_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_iic_ioext_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:6' bound to instance 'axi_iic_ioext' of component 'scalp_zynqps_axi_iic_ioext_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2604]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_iic_ioext_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_intc_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:6' bound to instance 'axi_intc_0' of component 'scalp_zynqps_axi_intc_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2634]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_intc_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_joystick_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:6' bound to instance 'axi_gpio_joystick' of component 'scalp_zynqps_axi_gpio_joystick_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2533]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_joystick_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_reset_btn_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:6' bound to instance 'axi_gpio_reset_btn' of component 'scalp_zynqps_axi_gpio_reset_btn_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2557]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_reset_btn_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_switches_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:6' bound to instance 'axi_gpio_switches' of component 'scalp_zynqps_axi_gpio_switches_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2580]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_switches_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_iic_ioext_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:6' bound to instance 'axi_iic_ioext' of component 'scalp_zynqps_axi_iic_ioext_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2604]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_iic_ioext_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_intc_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:6' bound to instance 'axi_intc_0' of component 'scalp_zynqps_axi_intc_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2634]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_intc_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:39]
 INFO: [Synth 8-3491] module 'scalp_zynqps_gnd_constant_0' declared at 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53' bound to instance 'gnd_constant' of component 'scalp_zynqps_gnd_constant_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2658]
 INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_gnd_constant_0' [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'scalp_zynqps_gnd_constant_0' (0#1) [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
-INFO: [Synth 8-3491] module 'scalp_zynqps_processing_system7_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'scalp_zynqps_processing_system7_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2662]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_processing_system7_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:98]
+INFO: [Synth 8-3491] module 'scalp_zynqps_processing_system7_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'scalp_zynqps_processing_system7_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2662]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_processing_system7_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:98]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:1100]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_FF8Z4U' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_FF8Z4U' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:58]
@@ -100,30 +100,30 @@ INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_YFU1B2' (0#1) [C:
 INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_J98Y8U' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:664]
 INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_J98Y8U' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:664]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_BVJLL9' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:788]
-INFO: [Synth 8-3491] module 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:853]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_stub.vhdl:77]
+INFO: [Synth 8-3491] module 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:853]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_imp_auto_pc_0_stub.vhdl:77]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_BVJLL9' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:788]
-INFO: [Synth 8-3491] module 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:1637]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:1637]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.vhdl:58]
 INFO: [Synth 8-256] done synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:1100]
-INFO: [Synth 8-3491] module 'scalp_zynqps_rst_ps7_0_125M_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_125M' of component 'scalp_zynqps_rst_ps7_0_125M_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2923]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_rst_ps7_0_125M_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:6' bound to instance 'scalp_axi_link_cplx_num_regs' of component 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2936]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:56]
-INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_firmwareid_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:6' bound to instance 'scalp_axi_link_firmwareid' of component 'scalp_zynqps_scalp_axi_link_firmwareid_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2977]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_firmwareid_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:56]
-INFO: [Synth 8-3491] module 'scalp_zynqps_sys_clock_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:6' bound to instance 'sys_clock' of component 'scalp_zynqps_sys_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3018]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_sys_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'scalp_zynqps_system_ila_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'scalp_zynqps_system_ila_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3026]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_system_ila_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'scalp_zynqps_rst_ps7_0_125M_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_125M' of component 'scalp_zynqps_rst_ps7_0_125M_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2923]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_rst_ps7_0_125M_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:6' bound to instance 'scalp_axi_link_cplx_num_regs' of component 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2936]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_firmwareid_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:6' bound to instance 'scalp_axi_link_firmwareid' of component 'scalp_zynqps_scalp_axi_link_firmwareid_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:2977]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_firmwareid_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'scalp_zynqps_sys_clock_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:6' bound to instance 'sys_clock' of component 'scalp_zynqps_sys_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3018]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_sys_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'scalp_zynqps_system_ila_0_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'scalp_zynqps_system_ila_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3026]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_system_ila_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:21]
 INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:15' bound to instance 'vga_hdmi_clk_rst_sys_0' of component 'vga_hdmi_clk_rst_system_inst_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3035]
 INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:6' bound to instance 'rst_ps7_1_vga' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:6' bound to instance 'rst_ps7_2_hdmi' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:6' bound to instance 'vga_hdmi_clock' of component 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:6' bound to instance 'rst_ps7_1_vga' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:6' bound to instance 'rst_ps7_2_hdmi' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' declared at 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:6' bound to instance 'vga_hdmi_clock' of component 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'vga_hdmi_clk_rst_system_inst_0' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
 INFO: [Synth 8-3491] module 'scalp_zynqps_xlconcat_0_0' declared at 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'scalp_zynqps_xlconcat_0_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3047]
 INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_xlconcat_0_0' [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53]
@@ -144,54 +144,54 @@ INFO: [Synth 8-256] done synthesizing module 'scalp_pwm' (0#1) [C:/CochetVictorL
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed1RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:625]
+INFO: [Synth 8-113] binding component instance 'OutBufLed1RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:626]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:634]
+INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:635]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed1GxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:668]
+INFO: [Synth 8-113] binding component instance 'OutBufLed1GxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:669]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:677]
+INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:678]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed1BxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:711]
+INFO: [Synth 8-113] binding component instance 'OutBufLed1BxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:712]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OutBufLed2BxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:720]
+INFO: [Synth 8-113] binding component instance 'OutBufLed2BxI' to cell 'OBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:721]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:737]
+INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:738]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:737]
+INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:738]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:752]
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:753]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:752]
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:753]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:752]
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:753]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:752]
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:753]
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:752]
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:753]
 INFO: [Synth 8-638] synthesizing module 'scalp_cplx_num_regs' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:61]
 	Parameter C_REGS_ADDR_SIZE bound to: 4096 - type: integer 
 	Parameter C_NB_REGS_IN bound to: 0 - type: integer 
 	Parameter C_NB_REGS_OUT bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'scalp_cplx_num_regs' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'scalp_hdmi' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'scalp_hdmi' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:54]
 	Parameter C_VGA_CONFIG[HActivexD] bound to: 16'b0000001011010000 
 	Parameter C_VGA_CONFIG[VActivexD] bound to: 16'b0000001011010000 
 	Parameter C_VGA_CONFIG[HFrontPorchxD] bound to: 16'b0000000001100100 
@@ -278,7 +278,7 @@ INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxCNxI' to cell 'OBUFD
 	Parameter SLEW bound to: FAST - type: string 
 INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxC3xI' to cell 'OBUFDS' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:172]
 INFO: [Synth 8-256] done synthesizing module 'vga_to_hdmi' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'scalp_hdmi' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'scalp_hdmi' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:54]
 INFO: [Synth 8-638] synthesizing module 'MndlCalc' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:57]
 	Parameter comma bound to: 12 - type: integer 
 	Parameter max_iter bound to: 100 - type: integer 
@@ -288,7 +288,7 @@ INFO: [Synth 8-638] synthesizing module 'MndlCalc' [C:/CochetVictorLPSC/scalp_re
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'A2mB2_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:193]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'A2mB2_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:195]
 INFO: [Synth 8-638] synthesizing module 'unimacro_MULT_MACRO' [C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:54]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
@@ -309,21 +309,21 @@ INFO: [Synth 8-256] done synthesizing module 'unimacro_MULT_MACRO' (0#1) [C:/Xil
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'AB_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:211]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'AB_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:213]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZRE' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:228]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZRE' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:230]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZIM' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:245]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZIM' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:247]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZRE_N1' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:260]
+INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZRE_N1' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:262]
 INFO: [Synth 8-638] synthesizing module 'unimacro_ADDSUB_MACRO' [C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:62]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
@@ -349,26 +349,26 @@ INFO: [Synth 8-256] done synthesizing module 'unimacro_ADDSUB_MACRO' (0#1) [C:/X
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZIM_N1' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:277]
+INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZIM_N1' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:279]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZRE2' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:294]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZRE2' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:296]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZIM2' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:309]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'ZIM2' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:311]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZNORM2' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:324]
+INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'ZNORM2' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:326]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 20 - type: integer 
 	Parameter WIDTH_B bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'IterOut_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:341]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'IterOut_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:343]
 INFO: [Synth 8-638] synthesizing module 'unimacro_MULT_MACRO__parameterized0' [C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:54]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
@@ -389,24 +389,24 @@ INFO: [Synth 8-256] done synthesizing module 'unimacro_MULT_MACRO__parameterized
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'Pix_X_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:357]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'Pix_X_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:359]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'Pix_X_Offset' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:372]
+INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'Pix_X_Offset' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:374]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'Pix_Y_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:390]
+INFO: [Synth 8-3491] module 'MULT_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:35' bound to instance 'Pix_Y_Mult' of component 'MULT_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:392]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'Pix_Y_Offset' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:405]
-WARNING: [Synth 8-614] signal 'RstxI' is read in the process but is not in the sensitivity list [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:425]
+INFO: [Synth 8-3491] module 'ADDSUB_MACRO' declared at 'C:/Xilinx/Vivado/2024.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:37' bound to instance 'Pix_Y_Offset' of component 'ADDSUB_MACRO' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:407]
+WARNING: [Synth 8-614] signal 'RstxI' is read in the process but is not in the sensitivity list [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:427]
 INFO: [Synth 8-256] done synthesizing module 'MndlCalc' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/blk_mem_gen_0_stub.vhdl:27]
-INFO: [Synth 8-638] synthesizing module 'mem0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-21832-Torchet/realtime/mem0_stub.vhdl:27]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/blk_mem_gen_0_stub.vhdl:27]
+INFO: [Synth 8-638] synthesizing module 'mem0' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-22728-Torchet/realtime/mem0_stub.vhdl:27]
 INFO: [Synth 8-638] synthesizing module 'MandelCacl_wrapper' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/hdl/MandelCacl_wrapper.vhd:24]
 INFO: [Synth 8-3491] module 'MandelCacl' declared at 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/synth/MandelCacl.vhd:15' bound to instance 'MandelCacl_i' of component 'MandelCacl' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/hdl/MandelCacl_wrapper.vhd:34]
 INFO: [Synth 8-638] synthesizing module 'MandelCacl' [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/synth/MandelCacl.vhd:28]
@@ -419,11 +419,10 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gen_v1_0_4' (0#1) [c:/Coc
 INFO: [Synth 8-6155] done synthesizing module 'MandelCacl_xpm_cdc_gen_0_1' (0#1) [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/synth/MandelCacl_xpm_cdc_gen_0_1.v:53]
 INFO: [Synth 8-256] done synthesizing module 'MandelCacl' (0#1) [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/synth/MandelCacl.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'MandelCacl_wrapper' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/hdl/MandelCacl_wrapper.vhd:24]
-WARNING: [Synth 8-614] signal 'RstxS' is read in the process but is not in the sensitivity list [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:966]
+WARNING: [Synth 8-614] signal 'RstxS' is read in the process but is not in the sensitivity list [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:967]
 INFO: [Synth 8-256] done synthesizing module 'scalp_user_design' (0#1) [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:309]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/synth/scalp_zynqps.vhd:3047]
 WARNING: [Synth 8-3848] Net VgaPixCounterxDO[VidOnxS] in module/entity vga_stripes does not have driver. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd:39]
-WARNING: [Synth 8-3848] Net RdyxO in module/entity MndlCalc does not have driver. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/new/MndlCalc.vhd:50]
 WARNING: [Synth 8-3848] Net dest_out_bin in module/entity xpm_cdc_gen_v1_0_4 does not have driver. [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ipshared/745f/hdl/xpm_cdc_gen_v1_0_vl_rfs.v:84]
 WARNING: [Synth 8-3848] Net src_rcv in module/entity xpm_cdc_gen_v1_0_4 does not have driver. [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ipshared/745f/hdl/xpm_cdc_gen_v1_0_vl_rfs.v:85]
 WARNING: [Synth 8-3848] Net dest_req in module/entity xpm_cdc_gen_v1_0_4 does not have driver. [c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ipshared/745f/hdl/xpm_cdc_gen_v1_0_vl_rfs.v:86]
@@ -449,7 +448,6 @@ WARNING: [Synth 8-7129] Port src_pulse in module xpm_cdc_gen_v1_0_4 is either un
 WARNING: [Synth 8-7129] Port src_rst in module xpm_cdc_gen_v1_0_4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dest_rst_in in module xpm_cdc_gen_v1_0_4 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port src_arst in module xpm_cdc_gen_v1_0_4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RdyxO in module MndlCalc is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ClocksxCI[VgaResetxRNA] in module serializer_10_to_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxR] in module serializer_10_to_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxRNA] in module serializer_10_to_1 is either unconnected or has no load
@@ -532,20 +530,21 @@ WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_6_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1283.289 ; gain = 611.922
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.785 ; gain = 613.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1283.289 ; gain = 611.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.785 ; gain = 613.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1283.289 ; gain = 611.922
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.785 ; gain = 613.129
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1283.289 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1285.785 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -630,6 +629,39 @@ WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_26'. [C
 WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/RESULT[1]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:160]
 WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/RESULT[10]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:164]
 WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_0'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:170]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[1]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:236]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[5]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:237]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[9]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:238]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[6]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:239]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[10]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:240]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[11]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:241]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[14]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:242]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[15]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:243]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[0]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:244]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[3]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:245]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[4]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:246]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[8]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:247]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[2]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:248]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[7]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:249]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[12]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:250]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrWrxD_reg[13]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:251]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.StartxS_reg_n_0'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:254]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[1]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:255]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[6]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:256]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[10]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:257]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[5]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:258]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[7]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:259]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[8]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:260]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[13]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:261]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[2]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:262]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[4]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:263]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[15]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:264]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[0]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:265]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[3]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:266]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[9]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:267]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[11]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:268]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[12]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:269]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.CurrAddrRdxD_reg[14]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:270]
 Finished Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/scalp_user_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/scalp_user_design_propImpl.xdc].
@@ -641,26 +673,26 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/scalp_user_d
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1360.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1361.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1360.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1361.020 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.906 ; gain = 691.539
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1362.695 ; gain = 690.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.906 ; gain = 691.539
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1362.695 ; gain = 690.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -933,9 +965,14 @@ Applied set_property MARK_DEBUG = false for \VgaPixCountersxD[HxD] [14]. (constr
 Applied set_property MARK_DEBUG = false for \VgaPixCountersxD[VxD] [4]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 66).
 Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.MandelCalc /ZimN1OutPxD[15]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 68).
 Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.MandelCalc /Znorm2OutPxD[9]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 69).
-Applied set_property MARK_DEBUG = true for \PLxB.ImGenxB.FinishedxS . (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 174).
-Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.IterxD [0]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 175).
-Applied set_property MARK_DEBUG = true for \PLxB.ImGenxB.MandelCalc /state[0]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 199).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.IterxD [0]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 174).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.MandelCalc /state[0]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 199).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.MandelCalc /CaPixxD[2]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 204).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.MandelCalc /CbPixxD[1]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 220).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.FinishedxS . (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 252).
+Applied set_property MARK_DEBUG = false for \PLxB.ImGenxB.RdyxS . (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 253).
+Applied set_property MARK_DEBUG = true for \PLxB.HdmixB.TxxI /\VgaPixCountersxDO[HxD] [1]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 271).
+Applied set_property MARK_DEBUG = true for \PLxB.HdmixB.TxxI /\VgaPixCountersxDO[VxD] [4]. (constraint file  C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc, line 273).
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.SwitchSource /MandelCacl_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.SwitchSource /MandelCacl_i/xpm_cdc_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.Mem2 . (constraint file  auto generated constraint).
@@ -963,7 +1000,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZy
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.Mem1 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.SwitchSource /MandelCacl_i/xpm_cdc_gen_0/inst/xarray. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.906 ; gain = 691.539
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1362.695 ; gain = 690.039
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3936] Found unconnected internal register 'AxiLitexB.WriteChanxB.WriteM2SRegPortxD_reg[WrAddrxD]' and it is trimmed from '32' to '12' bits. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd:264]
 INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' in module 'scalp_firmwareid'
@@ -971,11 +1008,11 @@ INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.WriteChanxB.Write
 WARNING: [Synth 8-3936] Found unconnected internal register 'AxiLitexB.WriteChanxB.WriteM2SRegPortxD_reg[WrAddrxD]' and it is trimmed from '32' to '12' bits. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:256]
 INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' in module 'scalp_cplx_num_regs'
 INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.WriteChanxB.WriteStatexD_reg' in module 'scalp_cplx_num_regs'
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Vga2HdmiConvertxB.VgaxI'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:97]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.HdmixB.TxxI'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:799]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MndlCalc'
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PSxB.ZynqxI'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:503]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.SwitchSource'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:958]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.HdmixB.TxxI'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:798]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.MandelCalc'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:917]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PSxB.ZynqxI'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:504]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.SwitchSource'. This will prevent further optimization [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:959]
 INFO: [Synth 8-802] inferred FSM for state register 'PLxB.ImGenxB.BramState_reg' in module 'scalp_user_design'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1009,18 +1046,17 @@ c_read_waiting_on_handshake |                              010 |                
 c_read_complete_transaction |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' using encoding 'one-hot' in module 'scalp_cplx_num_regs'
-INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'MndlCalc', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
                  startup |                              000 |                              000
-                new_data |                              011 |                              011
-               wait_rslt |                              001 |                              001
-              write_fifo |                              100 |                              100
-              done_write |                              101 |                              101
-               wait_mmry |                              010 |                              010
+                new_data |                              001 |                              011
+               wait_rslt |                              010 |                              001
+              write_fifo |                              011 |                              100
+              done_write |                              100 |                              101
+               wait_mmry |                              101 |                              010
 ---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'MndlCalc'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1029,9 +1065,9 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'MndlCalc'
                 fill_2nd |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PLxB.ImGenxB.BramState_reg' using encoding 'one-hot' in module 'scalp_user_design'
-WARNING: [Synth 8-327] inferring latch for variable 'PLxB.ImGenxB.RstxS_reg' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:925]
+WARNING: [Synth 8-327] inferring latch for variable 'PLxB.ImGenxB.RstxS_reg' [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:926]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1362.906 ; gain = 691.539
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1362.695 ; gain = 690.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1057,29 +1093,28 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 31    
+	                1 Bit    Registers := 33    
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 6     
 	   3 Input   32 Bit        Muxes := 2     
 	   5 Input   32 Bit        Muxes := 2     
-	   2 Input   16 Bit        Muxes := 2     
-	   7 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 8     
+	   6 Input   16 Bit        Muxes := 2     
 	   2 Input   12 Bit        Muxes := 2     
 	   5 Input   10 Bit        Muxes := 6     
 	   4 Input   10 Bit        Muxes := 3     
 	   2 Input   10 Bit        Muxes := 9     
 	   2 Input    9 Bit        Muxes := 8     
 	   2 Input    8 Bit        Muxes := 35    
-	   7 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 15    
-	   7 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
 	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
-	   3 Input    1 Bit        Muxes := 44    
-	   2 Input    1 Bit        Muxes := 39    
+	   3 Input    1 Bit        Muxes := 46    
+	   2 Input    1 Bit        Muxes := 42    
 	   5 Input    1 Bit        Muxes := 2     
-	   7 Input    1 Bit        Muxes := 8     
-	   4 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1097,25 +1132,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1408.039 ; gain = 736.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1390.281 ; gain = 717.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1517.648 ; gain = 846.281
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1518.809 ; gain = 846.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1577.578 ; gain = 906.211
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1567.793 ; gain = 895.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1595.680 ; gain = 924.312
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1585.875 ; gain = 913.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1132,39 +1167,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:1025]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_user_design.vhd:1033]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1239,16 +1274,16 @@ Report Cell Usage:
 |18    |vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_bbox       |     1|
 |19    |CARRY4                                                     |    44|
 |20    |DSP48E1                                                    |    14|
-|22    |LUT1                                                       |    19|
-|23    |LUT2                                                       |   191|
-|24    |LUT3                                                       |   166|
-|25    |LUT4                                                       |   202|
-|26    |LUT5                                                       |   170|
-|27    |LUT6                                                       |   192|
+|22    |LUT1                                                       |    20|
+|23    |LUT2                                                       |   192|
+|24    |LUT3                                                       |   169|
+|25    |LUT4                                                       |   201|
+|26    |LUT5                                                       |   183|
+|27    |LUT6                                                       |   172|
 |28    |OSERDESE2                                                  |     8|
 |30    |FDCE                                                       |   167|
 |31    |FDPE                                                       |     1|
-|32    |FDRE                                                       |   811|
+|32    |FDRE                                                       |   813|
 |33    |FDSE                                                       |    22|
 |34    |LD                                                         |     1|
 |35    |IBUF                                                       |     9|
@@ -1258,30 +1293,30 @@ Report Cell Usage:
 |39    |OBUFT                                                      |     2|
 +------+-----------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 139 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1759.219 ; gain = 1008.234
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1759.219 ; gain = 1087.852
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.004 ; gain = 1007.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1757.004 ; gain = 1084.348
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1762.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1762.133 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: PSxB.ZynqxI/<const0>.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1768.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1769.801 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
   LD => LDCE: 1 instance 
 
-Synth Design complete | Checksum: b7903681
+Synth Design complete | Checksum: 5664eeec
 INFO: [Common 17-83] Releasing license: Synthesis
-199 Infos, 159 Warnings, 0 Critical Warnings and 0 Errors encountered.
+199 Infos, 191 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1768.473 ; gain = 1321.148
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1768.473 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1769.801 ; gain = 1319.859
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1769.801 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/synth_1/scalp_user_design.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file scalp_user_design_utilization_synth.rpt -pb scalp_user_design_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  2 23:36:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  3 15:10:46 2025...

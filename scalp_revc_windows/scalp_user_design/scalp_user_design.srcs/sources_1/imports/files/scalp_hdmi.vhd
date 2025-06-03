@@ -45,7 +45,9 @@ entity scalp_hdmi is
         -- Pixel input
         PixelxDI          : in    t_hdmi_vga_pix;
         -- Hdmi Tx
-        HdmiTxxDIO        : inout t_hdmi_tx);
+        HdmiTxxDIO        : inout t_hdmi_tx;
+        
+        VgaSyncxO         : out t_hdmi_vga);
 
 end scalp_hdmi;
 
@@ -76,7 +78,7 @@ architecture arch of scalp_hdmi is
     signal VgaPixCountersxD : t_hdmi_vga_pix_counters                            := C_HDMI_VGA_PIX_COUNTERS_IDLE;
 
 begin
-
+    VgaSyncxO <= VgaxD; 
     assert (C_VGA_CONFIG = C_VGA_720X720_60HZ_CONFIG)
         report "Not supported resolution!" severity failure;
 

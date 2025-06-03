@@ -9,61 +9,21 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,681"></ZoomStartTime>
-      <ZoomEndTime time="3,693"></ZoomEndTime>
-      <Cursor1Time time="3,689"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="12"></ZoomEndTime>
+      <Cursor1Time time="1,027"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="389"></NameColumnWidth>
-      <ValueColumnWidth column_width="342"></ValueColumnWidth>
+      <ValueColumnWidth column_width="338"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIm2OutPxD" type="array">
+   <WVObjectSize size="1" />
+   <wvobject fp_name="PLxB.ImGenxB.CurrAddrRdxD_reg" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIm2OutPxD[27:12]</obj_property>
-      <obj_property name="ObjectShortName">ZIm2OutPxD[27:12]</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.CurrAddrRdxD_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.CurrAddrRdxD_reg[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/state" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/FinishedxO" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/FinishedxO</obj_property>
-      <obj_property name="ObjectShortName">FinishedxO</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZIm2OutPxD" type="array">
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZIm2OutPxD[27:12]</obj_property>
-      <obj_property name="ObjectShortName">ZIm2OutPxD[27:12]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD" type="array">
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[15:0]</obj_property>
-      <obj_property name="ObjectShortName">ZimN1OutPxD[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/Znorm2OutPxD" type="array">
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[15:14]</obj_property>
-      <obj_property name="ObjectShortName">Znorm2OutPxD[15:14]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.IterxD" type="array">
-      <obj_property name="ElementShortName">PLxB.ImGenxB.IterxD[23:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.IterxD[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.MandelCalc/RESULT" type="array">
-      <obj_property name="ElementShortName">PLxB.ImGenxB.MandelCalc/RESULT[15:0]</obj_property>
-      <obj_property name="ObjectShortName">RESULT[15:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -15,7 +15,7 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="407"></NameColumnWidth>
-      <ValueColumnWidth column_width="179"></ValueColumnWidth>
+      <ValueColumnWidth column_width="175"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wvobject fp_name="PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/system_ila_0/U0/probe0" type="array">

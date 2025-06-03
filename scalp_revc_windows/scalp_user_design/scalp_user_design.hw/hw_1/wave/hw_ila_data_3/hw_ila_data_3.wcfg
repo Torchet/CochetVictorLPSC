@@ -10,29 +10,19 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="16,385"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomEndTime time="12"></ZoomEndTime>
+      <Cursor1Time time="1,024"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="625"></NameColumnWidth>
-      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject fp_name="VgaPixCountersxD[HxD]" type="array">
+   <WVObjectSize size="1" />
+   <wvobject fp_name="PLxB.ImGenxB.CurrAddrWrxD_reg" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">VgaPixCountersxD[HxD][15:0]</obj_property>
-      <obj_property name="ObjectShortName">VgaPixCountersxD[HxD][15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="VgaPixCountersxD[VxD]" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">VgaPixCountersxD[VxD][15:0]</obj_property>
-      <obj_property name="ObjectShortName">VgaPixCountersxD[VxD][15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.CurrAddrWrxD_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.CurrAddrWrxD_reg[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
