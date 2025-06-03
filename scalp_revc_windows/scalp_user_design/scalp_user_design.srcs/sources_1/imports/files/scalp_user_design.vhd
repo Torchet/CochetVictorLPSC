@@ -897,10 +897,10 @@ begin
             signal Mem2EnBxD    : std_logic:='0';
             signal Mem2AddrBxD : std_logic_vector(15 downto 0);
             signal Mem2OutB :  std_logic_vector(23 downto 0);
-            signal MemFull : std_logic:='0';
+            signal MemFull : std_logic_vector(2 downto 0):=(others => '0');
             signal CurrAddrWrxD : integer range 0 to 50000 := 0;
             signal CurrAddrRdxD :  integer range 0 to 50000 := 0;     
-            signal CDCMemFull : std_logic_vector(0 downto 0):=(others => '0');
+            signal CDCMemFull : std_logic_vector(2 downto 0):=(others => '0');
             -- Attributes
             attribute mark_debug : string;
             attribute keep       : string;
@@ -913,56 +913,6 @@ begin
             -- attribute keep of BramWexD                : signal is "true";
 
         begin  -- block ImGenxB
-
-            BramSDPMacro1xI : BRAM_SDP_MACRO
-                generic map (
-                    BRAM_SIZE           => "36Kb",
-                    DEVICE              => "7SERIES",
-                    WRITE_WIDTH         => 32,
-                    READ_WIDTH          => 32,
-                    DO_REG              => 0,
-                    INIT_FILE           => "NONE",
-                    SIM_COLLISION_CHECK => "ALL",
-                    SRVAL               => X"000000000000000000",
-                    write_mode          => "WRITE_FIRST",
-                    INIT                => X"000000000000000000")
-                port map (
-                    DO     => CDCPatternPortsxD(0).RegxD,
-                    DI     => PatternPortsxD(1).RegxD,
-                    RDADDR => BramAddrxD,
-                    RDCLK  => HdmiVgaClocksxC.VgaxC,
-                    RDEN   => '1',
-                    REGCE  => '0',
-                    RST    => '0',
-                    WE     => BramWexD,
-                    WRADDR => BramAddrxD,
-                    WRCLK  => ClpxNumRegsAxixD.ClockxC.ClkxC,
-                    WREN   => '1');
-
-            BramSDPMacro2xI : BRAM_SDP_MACRO
-                generic map (
-                    BRAM_SIZE           => "36Kb",
-                    DEVICE              => "7SERIES",
-                    WRITE_WIDTH         => 32,
-                    READ_WIDTH          => 32,
-                    DO_REG              => 0,
-                    INIT_FILE           => "NONE",
-                    SIM_COLLISION_CHECK => "ALL",
-                    SRVAL               => X"000000000000000000",
-                    write_mode          => "WRITE_FIRST",
-                    INIT                => X"000000000000000000")
-                port map (
-                    DO     => CDCPatternPortsxD(1).RegxD,
-                    DI     => PatterMndnPortsxD(0).RegxD,
-                    RDADDR => BramAddrxD,
-                    RDCLK  => HdmiVgaClocksxC.VgaxC,
-                    RDEN   => '1',
-                    REGCE  => '0',
-                    RST    => '0',
-                    WE     => BramWexD,
-                    WRADDR => BramAddrxD,
-                    WRCLK  => ClpxNumRegsAxixD.ClockxC.ClkxC,
-                    WREN   => '1');
             
             MandelCalc : entity work.MndlCalc
                 generic map( 
@@ -976,10 +926,7 @@ begin
                         RdyxO         => RdyxS,
                         StartxI       => StartxS,
                         FinishedxO    => FinishedxS,
-                        CpixxI        => CpixxD,
-                        CpixyI        => CpiyxD,
-                        IterxO        => IterxD,
-                        FifoAlmFullxI => FifoAlmFullxD
+                        IterxO        => IterxD
                 );
 
             Mem1 : entity work.blk_mem_gen_0 
@@ -1029,6 +976,7 @@ begin
                             BramState <= FILL_FIRST;
                         when FILL_FIRST =>
                             Mem1AWEnxS <= "0";
+                            StartxS <= '1';
                             if FinishedxS = '1' then 
                                 Mem1AWEnxS <= "1";
                                 Mem1DinAxD <= IterxD;
@@ -1036,12 +984,26 @@ begin
                                 CurrAddrWrxD <= CurrAddrWrxD + 1;
                             elsif CurrAddrWrxD = 48400 then
                                 CurrAddrWrxD <= 0;
-                                MemFull <= '1';
+                                MemFull <= "001";
                                 Mem1AWEnxS <= "0";
+                                StartxS <= '0';
                                 BramState <= FILL_2ND;
                             end if;
                         when FILL_2ND   =>
-
+                            Mem2AWEnxS <= "0";
+                            StartxS <= '1';
+                            if FinishedxS = '1' then 
+                                Mem2AWEnxS <= "1";
+                                Mem2DinAxD <= IterxD;
+                                Mem2AddrAxD <= std_logic_vector(to_unsigned(CurrAddrWrxD,Mem2AddrAxD'length));
+                                CurrAddrWrxD <= CurrAddrWrxD + 1;
+                            elsif CurrAddrWrxD = 48400 then
+                                CurrAddrWrxD <= 0;
+                                MemFull <= "010";
+                                Mem2AWEnxS <= "0";
+                                StartxS <= '0';
+                                BramState <= FILL_FIRST;
+                            end if;
                     end case;
                 end if;
             end process Rst;
@@ -1054,9 +1016,8 @@ begin
                     PixelxD <= C_HDMI_VGA_PIX_BLACK;
                 elsif rising_edge(HdmiVgaClocksxC.VgaxC) then
                         PixelxD <= C_HDMI_VGA_PIX_RED;
-
-                    if VgaPixCountersxD.VidOnxS = '1' and MemFull = '1' then 
-                            if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
+                    if VgaPixCountersxD.VidOnxS = '1' and CDCMemFull = "001" then 
+                        if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
                             (to_integer(unsigned(VgaPixCountersxD.HxD)) < 470) then
                             if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 250) and
                                 (to_integer(unsigned(VgaPixCountersxD.VxD)) < 470) then
@@ -1073,8 +1034,28 @@ begin
                             CurrAddrRdxD <= 0;
                             Mem1EnBxD <= '0';
                         end if;    
-                    else
+                    elsif VgaPixCountersxD.VidOnxS = '1' and CDCMemFull = "010" then
+                        PixelxD <= C_HDMI_VGA_PIX_RED;
+                        if (to_integer(unsigned(VgaPixCountersxD.HxD)) >= 250) and
+                            (to_integer(unsigned(VgaPixCountersxD.HxD)) < 470) then
+                            if (to_integer(unsigned(VgaPixCountersxD.VxD)) >= 250) and
+                                (to_integer(unsigned(VgaPixCountersxD.VxD)) < 470) then
+                                    Mem2EnBxD <= '1';
+                                    Mem2AddrBxD <= std_logic_vector(to_unsigned(CurrAddrRdxD,Mem2AddrBxD'length));
+                                    CurrAddrRdxD <= CurrAddrRdxD + 1;
+                                    PixelxD.RxD <= Mem2OutB((C_VGA_PIXELS_SIZE - 1) downto (C_VGA_PIXEL_SIZE * 2));
+                                    PixelxD.GxD <= Mem2OutB(((C_VGA_PIXEL_SIZE * 2) - 1) downto (C_VGA_PIXEL_SIZE));
+                                    PixelxD.BxD <= Mem2OutB((C_VGA_PIXEL_SIZE - 1) downto 0);
+                                    --PixelxD <= Mem1OutB;
+                            end if;
+                        end if;
+                        if CurrAddrRdxD = 48400 then
+                            CurrAddrRdxD <= 0;
+                            Mem1EnBxD <= '0';
+                        end if;
+                    else 
                         Mem1EnBxD <= '0';
+                        Mem2EnBxD <= '0';
                         --FifoRdEnxD <= '0';
                         --NorthFrontier <= NorthFrontier +100 ;
                         PixelxD <= C_HDMI_VGA_PIX_MAGENTA;

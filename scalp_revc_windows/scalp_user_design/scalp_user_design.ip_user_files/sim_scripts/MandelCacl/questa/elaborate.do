@@ -1,0 +1,1 @@
+vopt -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xilinx_vip -L xpm -L xpm_cdc_gen_v1_0_4 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.MandelCacl xil_defaultlib.glbl -o MandelCacl_opt

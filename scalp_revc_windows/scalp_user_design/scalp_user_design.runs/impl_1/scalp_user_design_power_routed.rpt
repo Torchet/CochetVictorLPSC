@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Sun Jun  1 21:45:36 2025
+| Date             : Mon Jun  2 23:38:43 2025
 | Host             : Torchet running 64-bit major release  (build 9200)
 | Command          : report_power -file scalp_user_design_power_routed.rpt -pb scalp_user_design_power_summary_routed.pb -rpx scalp_user_design_power_routed.rpx
 | Design           : scalp_user_design
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.822        |
+| Total On-Chip Power (W)  | 1.799        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.695        |
+| Dynamic (W)              | 1.672        |
 | Device Static (W)        | 0.127        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 76.6         |
-| Junction Temperature (C) | 33.4         |
+| Max Ambient (C)          | 76.7         |
+| Junction Temperature (C) | 33.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.043 |        9 |       --- |             --- |
-| Slice Logic              |     0.008 |    15766 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     4938 |     46200 |           10.69 |
-|   Register               |    <0.001 |     7536 |     92400 |            8.16 |
-|   CARRY4                 |    <0.001 |      197 |     11550 |            1.71 |
-|   LUT as Shift Register  |    <0.001 |      411 |     14400 |            2.85 |
+| Clocks                   |     0.027 |        9 |       --- |             --- |
+| Slice Logic              |     0.006 |     9569 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     3161 |     46200 |            6.84 |
+|   Register               |    <0.001 |     4275 |     92400 |            4.63 |
+|   CARRY4                 |    <0.001 |      102 |     11550 |            0.88 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     14400 |            0.17 |
-|   F7/F8 Muxes            |    <0.001 |       70 |     46200 |            0.15 |
-|   Others                 |     0.000 |     1222 |       --- |             --- |
-| Signals                  |     0.015 |    11932 |       --- |             --- |
-| Block RAM                |     0.013 |     66.5 |        95 |           70.00 |
+|   LUT as Shift Register  |    <0.001 |      140 |     14400 |            0.97 |
+|   F7/F8 Muxes            |    <0.001 |      116 |     46200 |            0.25 |
+|   Others                 |     0.000 |      850 |       --- |             --- |
+| Signals                  |     0.011 |     7436 |       --- |             --- |
+| Block RAM                |     0.007 |     69.5 |        95 |           73.16 |
 | MMCM                     |     0.226 |        2 |         3 |           66.67 |
-| DSPs                     |     0.012 |       14 |       160 |            8.75 |
+| DSPs                     |     0.015 |       14 |       160 |            8.75 |
 | I/O                      |     0.160 |       30 |       150 |           20.00 |
 | PS7                      |     1.219 |        1 |       --- |             --- |
 | Static Power             |     0.127 |          |           |                 |
-| Total                    |     1.822 |          |           |                 |
+| Total                    |     1.799 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.103 |       0.092 |      0.012 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.080 |       0.068 |      0.012 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.137 |       0.126 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.064 |       0.063 |      0.001 |       NA    | Unspecified | NA         |
@@ -160,26 +160,33 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| scalp_user_design                |     1.695 |
-|   PLxB.HdmixB.TxxI               |     0.159 |
-|     Vga2HdmiConvertxB.Vga2HdmixI |     0.158 |
-|   PLxB.ImGenxB.MandelCalc        |     0.018 |
+| scalp_user_design                |     1.672 |
+|   PLxB.HdmixB.TxxI               |     0.160 |
+|     Vga2HdmiConvertxB.Vga2HdmixI |     0.159 |
+|   PLxB.ImGenxB.MandelCalc        |     0.022 |
 |     A2mB2_Mult                   |     0.003 |
 |     AB_Mult                      |     0.002 |
+|     IterOut_Mult                 |     0.001 |
+|     Pix_X_Mult                   |     0.001 |
+|     Pix_X_Offset                 |     0.001 |
+|     Pix_Y_Mult                   |     0.001 |
+|     Pix_Y_Offset                 |     0.001 |
 |     ZIM                          |     0.001 |
 |     ZIM2                         |     0.002 |
 |     ZIM_N1                       |     0.001 |
-|     ZNORM2                       |     0.001 |
 |     ZRE                          |     0.001 |
 |     ZRE2                         |     0.001 |
 |     ZRE_N1                       |     0.001 |
-|   PLxB.ImGenxB.Mem1              |     0.008 |
-|     U0                           |     0.008 |
-|       inst_blk_mem_gen           |     0.008 |
+|   PLxB.ImGenxB.Mem1              |     0.004 |
+|     U0                           |     0.004 |
+|       inst_blk_mem_gen           |     0.004 |
+|   PLxB.ImGenxB.Mem2              |     0.004 |
+|     U0                           |     0.004 |
+|       inst_blk_mem_gen           |     0.004 |
 |   PLxB.ScalpClpxNumRegsxI        |     0.001 |
 |   PLxB.ScalpFirmwareIDxI         |     0.001 |
-|   PSxB.ZynqxI                    |     1.468 |
-|     PlatformxB.ScalpZynqPSxI     |     1.468 |
+|   PSxB.ZynqxI                    |     1.470 |
+|     PlatformxB.ScalpZynqPSxI     |     1.470 |
 |       axi_iic_ioext              |     0.003 |
 |       processing_system7_0       |     1.220 |
 |       ps7_0_axi_periph           |     0.007 |
@@ -189,12 +196,6 @@ Table of Contents
 |   dbg_hub                        |     0.004 |
 |     inst                         |     0.004 |
 |       BSCANID.u_xsdbm_id         |     0.004 |
-|   u_ila_0                        |     0.021 |
-|     inst                         |     0.021 |
-|       ila_core_inst              |     0.021 |
-|   u_ila_1                        |     0.010 |
-|     inst                         |     0.010 |
-|       ila_core_inst              |     0.010 |
 +----------------------------------+-----------+
 
 

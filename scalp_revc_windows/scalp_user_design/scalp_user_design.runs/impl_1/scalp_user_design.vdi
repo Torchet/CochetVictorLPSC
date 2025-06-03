@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Sun Jun  1 21:42:29 2025
-# Process ID         : 26028
+# Start of session at: Mon Jun  2 23:36:28 2025
+# Process ID         : 17900
 # Current directory  : C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1
 # Command line       : vivado.exe -log scalp_user_design.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source scalp_user_design.tcl -notrace
 # Log file           : C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design.vdi
@@ -19,7 +19,7 @@
 # Host memory        : 33687 MB
 # Swap memory        : 4563 MB
 # Total Virtual      : 38250 MB
-# Available Virtual  : 13768 MB
+# Available Virtual  : 14582 MB
 #-----------------------------------------------------------
 source scalp_user_design.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -34,7 +34,6 @@ Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z015clg485-2
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'PLxB.ImGenxB.Mem1'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/ip/mem0/mem0.dcp' for cell 'PLxB.ImGenxB.Mem2'
-INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.gen/sources_1/bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/MandelCacl_xpm_cdc_gen_0_1.dcp' for cell 'PLxB.ImGenxB.SwitchSource/MandelCacl_i/xpm_cdc_gen_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_reset_btn_0/scalp_zynqps_axi_gpio_reset_btn_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches'
@@ -51,8 +50,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_1_vga'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_2_hdmi'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0.dcp' for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 710.617 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 345 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 711.031 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 343 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: PSxB.ZynqxI/<const0>.
 INFO: [Project 1-479] Netlist was created with Vivado 2024.2
@@ -105,38 +104,140 @@ Finished Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_des
 Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/scalp_firmware.xdc]
 Finished Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/scalp_firmware.xdc]
 Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]
-WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoWrEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoWrEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:46]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'ClpxNumRegsAxixD[ClockxC][ClkxC]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'ClpxNumRegsAxixD[ClockxC][ClkxC]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:50]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'HdmiVgaClocksxC[VgaxC]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'HdmiVgaClocksxC[VgaxC]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoRdEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoWrEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:55]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoRdEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:56]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_28'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_22'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[9]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_27'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_30'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[5]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:75]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:75]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoRdEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_24'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:76]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:76]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:129]
-WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoWrEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:130]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:130]
-WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.FifoRdEnxD'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:131]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:131]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[1]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_29'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_23'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[6]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[13]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_20'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[3]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[4]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[14]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_3'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[0]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_21'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[2]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[10]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_1'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[7]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[11]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_25'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_31'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[8]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[12]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_2'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'VgaPixCountersxD[VxD][0]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_26'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'VgaPixCountersxD[HxD][0]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[15]'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.MandelCalc/ZIM2_n_0'. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]
 Parsing XDC File [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0_clocks.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_intc_0/U0'
 Finished Parsing XDC File [c:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/ip/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0_clocks.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_intc_0/U0'
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-1687] 2 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1433.508 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1433.121 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 38 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 36 instances
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-32 Infos, 9 Warnings, 7 Critical Warnings and 0 Errors encountered.
+31 Infos, 43 Warnings, 41 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1433.508 ; gain = 993.527
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1433.121 ; gain = 993.727
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
@@ -147,13 +248,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors, 1 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1433.508 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1433.121 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1b8b18ee9
+Ending Cache Timing Information Task | Checksum: 2643c3071
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.385 . Memory (MB): peak = 1433.508 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.354 . Memory (MB): peak = 1433.121 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -164,226 +265,113 @@ Phase 1.1 Core Generation And Design Setup
 Phase 1.1.1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_0 
-INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
-INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_1 
-INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_1_CV.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = bdf7ed11bdd8cd60.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 81cd2c07de308ec7.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 33faf71baa3fa226.
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1847.168 ; gain = 0.000
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1847.168 ; gain = 0.000
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1847.168 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1860.895 ; gain = 0.000
-Phase 1.1.1 Generate And Synthesize Debug Cores | Checksum: 1ba4aedce
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 193402b2ba418446.
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1848.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1848.680 ; gain = 0.000
+Phase 1.1.1 Generate And Synthesize Debug Cores | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Phase 1.1 Core Generation And Design Setup | Checksum: 1ba4aedce
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Phase 1.1 Core Generation And Design Setup | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1ba4aedce
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Phase 1 Initialization | Checksum: 1ba4aedce
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Phase 1 Initialization | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
-Phase 2.1 Timer Update | Checksum: 1ba4aedce
+Phase 2.1 Timer Update | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Phase 2.2 Timing Data Collection
-Phase 2.2 Timing Data Collection | Checksum: 1ba4aedce
+Phase 2.2 Timing Data Collection | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Phase 2 Timer Update And Timing Data Collection | Checksum: 1ba4aedce
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1ce0a016e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Phase 3 Retarget
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__11
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__11
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[11] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[10] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[11] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[10] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__5
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__5
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__5
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__5
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__6
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__6
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__6
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__6
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__7
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__7
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__7
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__7
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__8
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__8
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__8
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__8
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/addra[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__9
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/addra[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__9
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/addra[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__9
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/addra[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__9
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__10
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__3
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addrb[13] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addrb[15] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addrb[14] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__4
-WARNING: [Opt 31-155] Driverless net PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/addrb[12] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: PLxB.ImGenxB.Mem2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__4
-INFO: [Common 17-14] Message 'Opt 31-155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
 INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
-INFO: [Opt 31-138] Pushed 6 inverter(s) to 11 load pin(s).
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 15 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 199a45d66
+Phase 3 Retarget | Checksum: 14b4bb27c
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Retarget | Checksum: 199a45d66
-INFO: [Opt 31-389] Phase Retarget created 98 cells and removed 181 cells
-INFO: [Opt 31-1021] In phase Retarget, 111 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Retarget | Checksum: 14b4bb27c
+INFO: [Opt 31-389] Phase Retarget created 103 cells and removed 174 cells
+INFO: [Opt 31-1021] In phase Retarget, 74 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 4 Constant propagation | Checksum: 1c09db586
+Phase 4 Constant propagation | Checksum: 15ff99ee9
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:36 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Constant propagation | Checksum: 1c09db586
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 159 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 55 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Constant propagation | Checksum: 15ff99ee9
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 17 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 49 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1860.895 ; gain = 0.000
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1848.680 ; gain = 0.000
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1860.895 ; gain = 0.000
-INFO: [Opt 31-120] Instance PLxB.ImGenxB.SwitchSource (MandelCacl_wrapper) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
-Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
-INFO: [Opt 31-120] Instance PLxB.ImGenxB.Mem2 (mem0) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
-Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
-Phase 5 Sweep | Checksum: 123820459
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1848.680 ; gain = 0.000
+Phase 5 Sweep | Checksum: 10e38679d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Sweep | Checksum: 123820459
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 470 cells
-INFO: [Opt 31-1021] In phase Sweep, 1716 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Sweep | Checksum: 10e38679d
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 191 cells
+INFO: [Opt 31-1021] In phase Sweep, 866 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: 1333e550b
+Phase 6 BUFG optimization | Checksum: 121998923
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
-BUFG optimization | Checksum: 1333e550b
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
+BUFG optimization | Checksum: 121998923
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
 
 Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: 1333e550b
+Phase 7 Shift Register Optimization | Checksum: 121998923
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Shift Register Optimization | Checksum: 1333e550b
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Shift Register Optimization | Checksum: 121998923
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 162db9ba2
+Phase 8 Post Processing Netlist | Checksum: fbfb1da4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Post Processing Netlist | Checksum: 162db9ba2
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Post Processing Netlist | Checksum: fbfb1da4
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 63 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 57 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: c29acd98
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 1e0589528
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1860.895 ; gain = 0.000
-Phase 9.2 Verifying Netlist Connectivity | Checksum: c29acd98
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1848.680 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 1e0589528
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
-Phase 9 Finalization | Checksum: c29acd98
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
+Phase 9 Finalization | Checksum: 1e0589528
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
 Opt_design Change Summary
 =========================
 
@@ -391,18 +379,18 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              98  |             181  |                                            111  |
-|  Constant propagation         |               0  |             159  |                                             55  |
-|  Sweep                        |               0  |             470  |                                           1716  |
+|  Retarget                     |             103  |             174  |                                             74  |
+|  Constant propagation         |               0  |              17  |                                             49  |
+|  Sweep                        |               0  |             191  |                                            866  |
 |  BUFG optimization            |               0  |               1  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                             63  |
+|  Post Processing Netlist      |               0  |               0  |                                             57  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: c29acd98
+Ending Logic Optimization Task | Checksum: 1e0589528
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.895 ; gain = 36.066
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1848.680 ; gain = 21.328
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -415,36 +403,36 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 54 BRAM(s) out of a total of 72 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 78 BRAM(s) out of a total of 79 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 119 newly gated: 0 Total Ports: 144
-Ending PowerOpt Patch Enables Task | Checksum: 1d88e649d
+Number of BRAM Ports augmented: 157 newly gated: 0 Total Ports: 158
+Ending PowerOpt Patch Enables Task | Checksum: 1ef774f82
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1d88e649d
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.246 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1ef774f82
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2227.758 ; gain = 366.863
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2125.566 ; gain = 276.887
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 19b5f95ef
+Ending Logic Optimization Task | Checksum: 1712b690a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.920 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 19b5f95ef
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.619 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1712b690a
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 19b5f95ef
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1712b690a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-88 Infos, 117 Warnings, 7 Critical Warnings and 0 Errors encountered.
+69 Infos, 43 Warnings, 41 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 2227.758 ; gain = 794.250
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2125.566 ; gain = 692.445
 INFO: [Vivado 12-24828] Executing command : report_drc -file scalp_user_design_drc_opted.rpt -pb scalp_user_design_drc_opted.pb -rpx scalp_user_design_drc_opted.rpx
 Command: report_drc -file scalp_user_design_drc_opted.rpt -pb scalp_user_design_drc_opted.pb -rpx scalp_user_design_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -453,16 +441,16 @@ INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/CochetVictorLPSC/scal
 report_drc completed successfully
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.566 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.130 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design_opt.dcp' has been generated.
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
@@ -483,63 +471,63 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a1cc8dba
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1285c5592
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13dbe39a7
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1d43fe847
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.821 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.496 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1acc6a662
+Phase 1.3 Build Placer Netlist Model | Checksum: 254c6e257
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1acc6a662
+Phase 1.4 Constrain Clocks/Macros | Checksum: 254c6e257
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1acc6a662
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 254c6e257
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1f61a1c8c
+Phase 2.1 Floorplanning | Checksum: 1b6534dd8
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 241a4a90b
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1d6c2334c
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 241a4a90b
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1a37f1c40
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.4 Global Place Phase1
-Phase 2.4 Global Place Phase1 | Checksum: 188308f6e
+Phase 2.4 Global Place Phase1 | Checksum: 28717976f
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.5 Global Place Phase2
 
 Phase 2.5.1 UpdateTiming Before Physical Synthesis
-Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 12e53045f
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 27c5a01ae
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.5.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 450 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 357 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 189 nets or LUTs. Breaked 0 LUT, combined 189 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 152 nets or LUTs. Breaked 0 LUT, combined 152 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -558,7 +546,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -567,7 +555,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            189  |                   189  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            152  |                   152  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -576,69 +564,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            189  |                   189  |           0  |           9  |  00:00:00  |
+|  Total                                            |            0  |            152  |                   152  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.5.2 Physical Synthesis In Placer | Checksum: 223ec60a4
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2c234afcc
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 2.5 Global Place Phase2 | Checksum: 22de350a1
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 25464f0cb
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 22de350a1
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 25464f0cb
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1940fe63a
+Phase 3.1 Commit Multi Column Macros | Checksum: 27006c483
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 171978561
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 249a2f1b3
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 23123f710
+Phase 3.3 Area Swap Optimization | Checksum: 17b45e6d1
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 21c06d74a
+Phase 3.4 Pipeline Register Optimization | Checksum: 2347eec77
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 19586e798
+Phase 3.5 Fast Optimization | Checksum: 1d73cee1d
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 2330420d5
+Phase 3.6 Small Shape Detail Placement | Checksum: 2143780da
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 216167fb7
+Phase 3.7 Re-assign LUT pins | Checksum: 1b10fcdb6
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1eab9eb89
+Phase 3.8 Pipeline Register Optimization | Checksum: 1acd75ad2
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 27e9ad7ab
+Phase 3.9 Fast Optimization | Checksum: 12c47af02
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 27e9ad7ab
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 12c47af02
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -646,7 +634,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 138c1562f
+Post Placement Optimization Initialization | Checksum: 15db28d6e
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -654,33 +642,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.926 | TNS=-164.967 |
-Phase 1 Physical Synthesis Initialization | Checksum: 145ffa720
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.420 | TNS=-608.670 |
+Phase 1 Physical Synthesis Initialization | Checksum: 12ab67e9e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.422 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.249 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 1ebb7aa2e
+Ending Physical Synthesis Task | Checksum: 1887b5f46
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.486 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 138c1562f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.285 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15db28d6e
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.899. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 123024144
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-14.111. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 29a1c4f69
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 123024144
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 29a1c4f69
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 123024144
+Phase 4.2 Post Placement Cleanup | Checksum: 29a1c4f69
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -692,51 +680,51 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                1x1|
 |___________|___________________|___________________|
-|      South|                1x1|                2x2|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 123024144
+Phase 4.3.1 Print Estimated Congestion | Checksum: 29a1c4f69
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 123024144
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 29a1c4f69
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 16e0a7511
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23e5f8869
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Ending Placer Task | Checksum: 1412cd577
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Ending Placer Task | Checksum: 197443436
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2227.758 ; gain = 0.000
-132 Infos, 117 Warnings, 7 Critical Warnings and 0 Errors encountered.
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2125.566 ; gain = 0.000
+113 Infos, 43 Warnings, 41 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 2227.758 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:26 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
 Running report generation with 2 threads.
 INFO: [Vivado 12-24828] Executing command : report_io -file scalp_user_design_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2227.758 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file scalp_user_design_utilization_placed.rpt -pb scalp_user_design_utilization_placed.pb
 INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file scalp_user_design_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2227.758 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.921 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.500 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.566 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.570 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
@@ -744,96 +732,196 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2227.758 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 2.00s |  WALL: 1.30s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.845 . Memory (MB): peak = 2125.566 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.88s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.111 | TNS=-162.750 |
-Phase 1 Physical Synthesis Initialization | Checksum: 26614af8b
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.096 | TNS=-600.170 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a7436bd7
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.938 . Memory (MB): peak = 2227.758 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.111 | TNS=-162.750 |
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.545 . Memory (MB): peak = 2125.566 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.096 | TNS=-600.170 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 26614af8b
+Phase 2 DSP Register Optimization | Checksum: 1a7436bd7
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.599 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.111 | TNS=-162.750 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.CurrAddrRdxD[13].  Re-placed instance PLxB.ImGenxB.CurrAddrRdxD_reg[13]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.CurrAddrRdxD[13]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.111 | TNS=-162.441 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.CurrAddrRdxD[14].  Re-placed instance PLxB.ImGenxB.CurrAddrRdxD_reg[14]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.CurrAddrRdxD[14]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.111 | TNS=-162.132 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.CurrAddrRdxD[15].  Re-placed instance PLxB.ImGenxB.CurrAddrRdxD_reg[15]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.CurrAddrRdxD[15]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.026 | TNS=-161.823 |
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.CurrAddrRdxD[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.096 | TNS=-600.170 |
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/IterxO[16].  Re-placed instance PLxB.ImGenxB.MandelCalc/IterxO_reg[16]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/IterxO[16]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.096 | TNS=-600.126 |
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/IterxO[22].  Re-placed instance PLxB.ImGenxB.MandelCalc/IterxO_reg[22]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/IterxO[22]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.096 | TNS=-600.082 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/IterxO[23]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125_scalp_zynqps_sys_clock_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net p_0_in[13]. Critical path length was reduced through logic transformation on cell PLxB.ImGenxB.CurrAddrRdxD[15]_i_1_comp.
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.CurrAddrRdxD[15]_i_5_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.023 | TNS=-161.772 |
-INFO: [Physopt 32-663] Processed net PixelxD[RxD]14_out.  Re-placed instance PLxB.ImGenxB.Mem1EnBxD_i_2
-INFO: [Physopt 32-735] Processed net PixelxD[RxD]14_out. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.860 | TNS=-159.001 |
-INFO: [Physopt 32-663] Processed net PixelxD[RxD]14_out.  Re-placed instance PLxB.ImGenxB.Mem1EnBxD_i_2
-INFO: [Physopt 32-735] Processed net PixelxD[RxD]14_out. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.841 | TNS=-158.678 |
-INFO: [Physopt 32-710] Processed net p_0_in[13]. Critical path length was reduced through logic transformation on cell PLxB.ImGenxB.CurrAddrRdxD[15]_i_1_comp_1.
-INFO: [Physopt 32-735] Processed net PixelxD[RxD]14_out. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.283 | TNS=-149.364 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.Mem1AddrBxD[15].  Re-placed instance PLxB.ImGenxB.Mem1AddrBxD_reg[15]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.Mem1AddrBxD[15]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.283 | TNS=-149.321 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.Mem1AddrBxD[3].  Re-placed instance PLxB.ImGenxB.Mem1AddrBxD_reg[3]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.Mem1AddrBxD[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.283 | TNS=-149.278 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.Mem1AddrBxD[5].  Re-placed instance PLxB.ImGenxB.Mem1AddrBxD_reg[5]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.Mem1AddrBxD[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.283 | TNS=-149.235 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.Mem1AddrBxD[6].  Re-placed instance PLxB.ImGenxB.Mem1AddrBxD_reg[6]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.Mem1AddrBxD[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.283 | TNS=-149.192 |
-INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.Mem1AddrBxD[9].  Re-placed instance PLxB.ImGenxB.Mem1AddrBxD_reg[9]
-INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.Mem1AddrBxD[9]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.269 | TNS=-149.166 |
-INFO: [Physopt 32-702] Processed net p_0_in[13]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MemFull_reg_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.CurrAddrRdxD[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-242] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Rewired (signal push) PLxB.ImGenxB.MandelCalc/ZNORM2/Znorm2OutPxD[14] to 1 loads. Replicated 0 times.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.044 | TNS=-598.834 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.006 | TNS=-597.922 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.917 | TNS=-595.786 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/E[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.909 | TNS=-595.594 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/E[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/CARRYOUT. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE2/P[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_6__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_51_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.811 | TNS=-591.380 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2_4[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE/P[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A2mb2InBxD[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_2__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_3__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_4__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_23__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[1].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZaxD_reg[1]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.798 | TNS=-591.254 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_24__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.789 | TNS=-590.723 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A2mb2InAxD[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_6__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_7__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_8__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_39__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[1]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.771 | TNS=-590.369 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_40__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[0].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZaxD_reg[0]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.762 | TNS=-590.260 |
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[0]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.682 | TNS=-586.416 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_21__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[3].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZaxD_reg[3]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.676 | TNS=-586.795 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_19__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[5].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[5]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.670 | TNS=-587.257 |
+INFO: [Physopt 32-81] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.670 | TNS=-597.577 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_38__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[2].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZaxD_reg[2]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.668 | TNS=-597.913 |
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[5].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZaxD_reg[5]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.667 | TNS=-597.995 |
+INFO: [Physopt 32-81] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[1]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZaxD_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.654 | TNS=-610.701 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_36__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[4].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[4]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.648 | TNS=-610.936 |
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1]_repN_1.  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[1]_replica_1
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[1]_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.645 | TNS=-610.776 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_37__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[3].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[3]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.643 | TNS=-611.275 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_20__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.643 | TNS=-611.071 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_24__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.631 | TNS=-622.144 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_20__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[4].  Re-placed instance PLxB.ImGenxB.MandelCalc/ZbxD_reg[4]
+INFO: [Physopt 32-735] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.620 | TNS=-621.643 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/IterxO[23]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125_scalp_zynqps_sys_clock_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net p_0_in[13]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MemFull_reg_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.269 | TNS=-149.166 |
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 3 Critical Path Optimization | Checksum: 26614af8b
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/E[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/CARRYOUT. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE2/P[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2_4[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE/P[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A2mb2InAxD[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_40__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.620 | TNS=-621.643 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 3 Critical Path Optimization | Checksum: 1a7436bd7
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.269 | TNS=-149.166 |
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.CurrAddrRdxD[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.620 | TNS=-621.643 |
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/IterxO[23]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125_scalp_zynqps_sys_clock_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net p_0_in[13]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MemFull_reg_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.CurrAddrRdxD[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/E[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/CARRYOUT. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE2/P[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_6__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2_4[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE/P[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A2mb2InAxD[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_6__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_7__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_8__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_40__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/IterxO[23]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125_scalp_zynqps_sys_clock_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net p_0_in[13]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MemFull_reg_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.269 | TNS=-149.166 |
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Phase 4 Critical Path Optimization | Checksum: 26614af8b
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/IterxO[23]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/E[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZNORM2/CARRYOUT. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE2/P[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2_4[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZRE/P[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/A2mb2InAxD[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_i_40__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net PLxB.ImGenxB.MandelCalc/ZbxD_reg_n_0_[0]_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.620 | TNS=-621.643 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Phase 4 Critical Path Optimization | Checksum: 1a7436bd7
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2227.758 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-2.269 | TNS=-149.166 |
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2125.566 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-13.620 | TNS=-621.643 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -843,29 +931,30 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.842  |         13.584  |            0  |              0  |                    12  |           0  |           2  |  00:00:02  |
-|  Total          |          0.842  |         13.584  |            0  |              0  |                    12  |           0  |           3  |  00:00:02  |
+|  Critical Path  |          0.476  |        -21.474  |            6  |              0  |                    24  |           0  |           2  |  00:00:03  |
+|  Total          |          0.476  |        -21.474  |            6  |              0  |                    24  |           0  |           3  |  00:00:04  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 1aebe6ea4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 2b65378b0
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-203 Infos, 117 Warnings, 7 Critical Warnings and 0 Errors encountered.
+284 Infos, 43 Warnings, 41 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.988 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.520 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.566 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2227.758 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2125.566 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.585 . Memory (MB): peak = 2125.566 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
@@ -879,43 +968,43 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 2e2786f5 ConstDB: 0 ShapeSum: ffe291bc RouteDB: 74b7e438
-Post Restoration Checksum: NetGraph: d522f88b | NumContArr: 1fe0a9a3 | Constraints: c2a8fa9d | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 27a559768
+Checksum: PlaceDB: df74f658 ConstDB: 0 ShapeSum: e4d6ae2e RouteDB: 74b7e438
+Post Restoration Checksum: NetGraph: 5765a7a5 | NumContArr: 33727e37 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2102a1b16
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 27a559768
+Phase 2.1 Fix Topology Constraints | Checksum: 2102a1b16
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2125.566 ; gain = 0.000
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 27a559768
+Phase 2.2 Pre Route Cleanup | Checksum: 2102a1b16
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2227.758 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2125.566 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1933eab45
+Phase 2.3 Update Timing | Checksum: 2c4bbb48c
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 2236.262 ; gain = 8.504
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.186 | TNS=-144.012| WHS=-0.605 | THS=-483.588|
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2131.066 ; gain = 5.500
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.592| TNS=-623.302| WHS=-0.342 | THS=-281.378|
 
 
 Phase 2.4 Update Timing for Bus Skew
 
 Phase 2.4.1 Update Timing
-Phase 2.4.1 Update Timing | Checksum: 13fad36c5
+Phase 2.4.1 Update Timing | Checksum: 261f5035b
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 2290.664 ; gain = 62.906
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.186 | TNS=-152.144| WHS=-0.414 | THS=-21.601|
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2184.152 ; gain = 58.586
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.592| TNS=-621.718| WHS=-0.116 | THS=-0.386 |
 
-Phase 2.4 Update Timing for Bus Skew | Checksum: 1886f3482
+Phase 2.4 Update Timing for Bus Skew | Checksum: 1e8beb5f2
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2290.664 ; gain = 62.906
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2184.152 ; gain = 58.586
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -923,110 +1012,115 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 12063
+  Number of Failed Nets               = 7567
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 12062
+  Number of Unrouted Nets             = 7566
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 13d521b5a
+Phase 2 Router Initialization | Checksum: 1d23a68a9
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2290.664 ; gain = 62.906
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2184.152 ; gain = 58.586
 
 Phase 3 Global Routing
-Phase 3 Global Routing | Checksum: 13d521b5a
+Phase 3 Global Routing | Checksum: 1d23a68a9
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2290.664 ; gain = 62.906
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2184.152 ; gain = 58.586
 
 Phase 4 Initial Routing
 
 Phase 4.1 Initial Net Routing Pass
-Phase 4.1 Initial Net Routing Pass | Checksum: 26c7401ed
+Phase 4.1 Initial Net Routing Pass | Checksum: 1e3217084
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:30 . Memory (MB): peak = 2311.074 ; gain = 83.316
-Phase 4 Initial Routing | Checksum: 26c7401ed
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 2188.977 ; gain = 63.410
+Phase 4 Initial Routing | Checksum: 1e3217084
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:30 . Memory (MB): peak = 2311.074 ; gain = 83.316
-INFO: [Route 35-580] Design has 73 pins with tight setup and hold constraints.
-
-The top 5 pins with tight setup and hold constraints:
-
-+==================================+==================================+=====================================+
-| Launch Setup Clock               | Launch Hold Clock                | Pin                                 |
-+==================================+==================================+=====================================+
-| clk_125_scalp_zynqps_sys_clock_0 | clk_125_scalp_zynqps_sys_clock_0 | PLxB.ImGenxB.Mem1EnBxD_reg/D        |
-| clk_125_scalp_zynqps_sys_clock_0 | clk_125_scalp_zynqps_sys_clock_0 | PLxB.ImGenxB.CurrAddrRdxD_reg[0]/R  |
-| clk_125_scalp_zynqps_sys_clock_0 | clk_125_scalp_zynqps_sys_clock_0 | PLxB.ImGenxB.CurrAddrRdxD_reg[13]/R |
-| clk_125_scalp_zynqps_sys_clock_0 | clk_125_scalp_zynqps_sys_clock_0 | PLxB.ImGenxB.CurrAddrRdxD_reg[3]/R  |
-| clk_125_scalp_zynqps_sys_clock_0 | clk_125_scalp_zynqps_sys_clock_0 | PLxB.ImGenxB.CurrAddrRdxD_reg[1]/R  |
-+----------------------------------+----------------------------------+-------------------------------------+
-
-File with complete list of pins: tight_setup_hold_pins.txt
-
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 2188.977 ; gain = 63.410
 
 Phase 5 Rip-up And Reroute
 
 Phase 5.1 Global Iteration 0
- Number of Nodes with overlaps = 878
- Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 486
+ Number of Nodes with overlaps = 8
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.745 | TNS=-226.849| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.389| TNS=-656.052| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Global Iteration 0 | Checksum: 2df7867ea
+Phase 5.1 Global Iteration 0 | Checksum: 16302467b
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:41 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2220.984 ; gain = 95.418
 
 Phase 5.2 Global Iteration 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.644 | TNS=-223.783| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.290| TNS=-653.583| WHS=N/A    | THS=N/A    |
 
-Phase 5.2 Global Iteration 1 | Checksum: 20cf58ce6
+Phase 5.2 Global Iteration 1 | Checksum: 18cd8a67c
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
-Phase 5 Rip-up And Reroute | Checksum: 20cf58ce6
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 2220.984 ; gain = 95.418
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Phase 5.3 Global Iteration 2
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.196| TNS=-649.333| WHS=N/A    | THS=N/A    |
+
+Phase 5.3 Global Iteration 2 | Checksum: 1a2fee9bf
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 2220.996 ; gain = 95.430
+
+Phase 5.4 Global Iteration 3
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.173| TNS=-648.732| WHS=N/A    | THS=N/A    |
+
+Phase 5.4 Global Iteration 3 | Checksum: 2d56b6ca7
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2220.996 ; gain = 95.430
+Phase 5 Rip-up And Reroute | Checksum: 2d56b6ca7
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 6 Delay and Skew Optimization
 
 Phase 6.1 Delay CleanUp
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 158c4799e
+Phase 6.1.1 Update Timing | Checksum: 24c036ee3
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.644 | TNS=-223.783| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2220.996 ; gain = 95.430
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.077| TNS=-639.089| WHS=N/A    | THS=N/A    |
 
-Phase 6.1 Delay CleanUp | Checksum: 173ffa7d5
+ Number of Nodes with overlaps = 0
+Phase 6.1 Delay CleanUp | Checksum: 25373ae2e
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 6.2 Clock Skew Optimization
-Phase 6.2 Clock Skew Optimization | Checksum: 173ffa7d5
+Phase 6.2 Clock Skew Optimization | Checksum: 25373ae2e
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
-Phase 6 Delay and Skew Optimization | Checksum: 173ffa7d5
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
+Phase 6 Delay and Skew Optimization | Checksum: 25373ae2e
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Hold Fix Iter
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.644 | TNS=-223.783| WHS=0.036  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.076| TNS=-635.452| WHS=0.062  | THS=0.000  |
 
-Phase 7.1 Hold Fix Iter | Checksum: 1ff9fc496
+Phase 7.1 Hold Fix Iter | Checksum: 2b650f729
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:43 . Memory (MB): peak = 2367.207 ; gain = 139.449
-Phase 7 Post Hold Fix | Checksum: 1ff9fc496
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
+Phase 7 Post Hold Fix | Checksum: 2b650f729
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:43 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.78046 %
-  Global Horizontal Routing Utilization  = 3.14745 %
+  Global Vertical Routing Utilization    = 2.23901 %
+  Global Horizontal Routing Utilization  = 2.48974 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1040,9 +1134,9 @@ Router Utilization Summary
 --GLOBAL Congestion:
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
-North Dir 1x1 Area, Max Cong = 52.2523%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 57.6577%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 52.2523%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
 West Dir 1x1 Area, Max Cong = 44.1176%, No Congested Regions.
 
 ------------------------------
@@ -1065,51 +1159,51 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 8 Route finalize | Checksum: 1ff9fc496
+Phase 8 Route finalize | Checksum: 2b650f729
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:43 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1ff9fc496
+Phase 9 Verifying routed nets | Checksum: 2b650f729
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:43 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 29d3517fd
+Phase 10 Depositing Routes | Checksum: 1f1cbf2cf
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 11 Post Process Routing
-Phase 11 Post Process Routing | Checksum: 29d3517fd
+Phase 11 Post Process Routing | Checksum: 1f1cbf2cf
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Phase 12 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-3.644 | TNS=-223.783| WHS=0.036  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-14.076| TNS=-635.452| WHS=0.062  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 12 Post Router Timing | Checksum: 29d3517fd
+Phase 12 Post Router Timing | Checksum: 1f1cbf2cf
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 2367.207 ; gain = 139.449
-Total Elapsed time in route_design: 43.957 secs
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
+Total Elapsed time in route_design: 36.383 secs
 
 Phase 13 Post-Route Event Processing
-Phase 13 Post-Route Event Processing | Checksum: 161b3fa2f
+Phase 13 Post-Route Event Processing | Checksum: 16f7ac88e
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 INFO: [Route 35-16] Router Completed Successfully
-Ending Routing Task | Checksum: 161b3fa2f
+Ending Routing Task | Checksum: 16f7ac88e
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:44 . Memory (MB): peak = 2367.207 ; gain = 139.449
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2220.996 ; gain = 95.430
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-220 Infos, 118 Warnings, 7 Critical Warnings and 0 Errors encountered.
+302 Infos, 44 Warnings, 41 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 2367.207 ; gain = 139.449
+route_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:37 . Memory (MB): peak = 2220.996 ; gain = 95.430
 INFO: [Vivado 12-24828] Executing command : report_drc -file scalp_user_design_drc_routed.rpt -pb scalp_user_design_drc_routed.pb -rpx scalp_user_design_drc_routed.rpx
 Command: report_drc -file scalp_user_design_drc_routed.rpt -pb scalp_user_design_drc_routed.pb -rpx scalp_user_design_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -1122,7 +1216,6 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2367.207 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -file scalp_user_design_timing_summary_routed.rpt -pb scalp_user_design_timing_summary_routed.pb -rpx scalp_user_design_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
@@ -1139,24 +1232,24 @@ Command: report_power -file scalp_user_design_power_routed.rpt -pb scalp_user_de
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-237 Infos, 119 Warnings, 8 Critical Warnings and 0 Errors encountered.
+319 Infos, 45 Warnings, 42 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file scalp_user_design_clock_utilization_routed.rpt
 INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file scalp_user_design_bus_skew_routed.rpt -pb scalp_user_design_bus_skew_routed.pb -rpx scalp_user_design_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-generate_parallel_reports: Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2367.207 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2239.891 ; gain = 18.895
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2367.207 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.946 . Memory (MB): peak = 2379.941 ; gain = 12.734
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2379.941 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2239.891 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.579 . Memory (MB): peak = 2254.109 ; gain = 14.219
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2254.109 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.137 . Memory (MB): peak = 2379.941 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2379.941 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2379.941 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2379.941 ; gain = 12.734
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2254.109 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2254.109 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2254.109 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.703 . Memory (MB): peak = 2254.109 ; gain = 14.219
 INFO: [Common 17-1381] The checkpoint 'C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/impl_1/scalp_user_design_routed.dcp' has been generated.
 Command: write_bitstream -force scalp_user_design.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
@@ -1177,7 +1270,7 @@ Writing bitstream ./scalp_user_design.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-252 Infos, 119 Warnings, 8 Critical Warnings and 0 Errors encountered.
+334 Infos, 45 Warnings, 42 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2883.688 ; gain = 503.746
-INFO: [Common 17-206] Exiting Vivado at Sun Jun  1 21:45:59 2025...
+write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 2760.238 ; gain = 506.129
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  2 23:39:02 2025...

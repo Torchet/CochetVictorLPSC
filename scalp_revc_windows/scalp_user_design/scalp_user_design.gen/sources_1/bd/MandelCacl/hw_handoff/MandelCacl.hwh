@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jun  1 17:59:55 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  2 21:21:00 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="hepia-cores.ch:scalp_node:part0:0.2" DEVICE="7z015" NAME="MandelCacl" PACKAGE="clg485" SPEEDGRADE="-2"/>
 
@@ -9,12 +9,12 @@
         <CONNECTION INSTANCE="xpm_cdc_gen_0" PORT="dest_clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="Dest_Out" RIGHT="0" SIGIS="data" SIGNAME="xpm_cdc_gen_0_dest_out">
+    <PORT DIR="O" LEFT="2" NAME="Dest_Out" RIGHT="0" SIGIS="data" SIGNAME="xpm_cdc_gen_0_dest_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xpm_cdc_gen_0" PORT="dest_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Src_In" SIGIS="data" SIGNAME="External_Ports_Src_In">
+    <PORT DIR="I" LEFT="2" NAME="Src_In" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Src_In">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xpm_cdc_gen_0" PORT="src_in"/>
       </CONNECTIONS>
@@ -34,7 +34,7 @@
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xpm_cdc_gen;v=v1_0;d=pg382-xpm-cdc-generator.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="C_CDC_TYPE" VALUE="6"/>
+        <PARAMETER NAME="C_CDC_TYPE" VALUE="1"/>
         <PARAMETER NAME="DEST_CLK_PERIOD" VALUE="2500"/>
         <PARAMETER NAME="DEST_EXT_HSK" VALUE="1"/>
         <PARAMETER NAME="DEST_SYNC_FF" VALUE="4"/>
@@ -48,8 +48,8 @@
         <PARAMETER NAME="SRC_CLK_PERIOD" VALUE="5000"/>
         <PARAMETER NAME="SRC_INPUT_REG" VALUE="1"/>
         <PARAMETER NAME="SRC_SYNC_FF" VALUE="4"/>
-        <PARAMETER NAME="WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CDC_TYPE" VALUE="xpm_cdc_single"/>
+        <PARAMETER NAME="WIDTH" VALUE="3"/>
+        <PARAMETER NAME="CDC_TYPE" VALUE="xpm_cdc_array_single"/>
         <PARAMETER NAME="Component_Name" VALUE="MandelCacl_xpm_cdc_gen_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -59,7 +59,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Dest_Clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="dest_out" RIGHT="0" SIGIS="undef" SIGNAME="xpm_cdc_gen_0_dest_out">
+        <PORT DIR="O" LEFT="2" NAME="dest_out" RIGHT="0" SIGIS="undef" SIGNAME="xpm_cdc_gen_0_dest_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Dest_Out"/>
           </CONNECTIONS>
@@ -69,7 +69,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="src_clk_1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="src_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Src_In">
+        <PORT DIR="I" LEFT="2" NAME="src_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Src_In">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Src_In"/>
           </CONNECTIONS>

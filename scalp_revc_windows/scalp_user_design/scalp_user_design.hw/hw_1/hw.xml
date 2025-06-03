@@ -5,7 +5,7 @@
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z015_1" gui_info="dashboard1=hw_ila_1[xc7z015_1/hw_ila_1/Status=ILA_STATUS_1;xc7z015_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z015_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z015_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z015_1/XADC=XADC_PLOT_1;xc7z015_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;],dashboard2=hw_ila_2[xc7z015_1/hw_ila_2/Status=ILA_STATUS_1;xc7z015_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z015_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z015_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z015_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;],dashboard3=hw_ila_3[xc7z015_1/hw_ila_3/Status=ILA_STATUS_1;xc7z015_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z015_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;xc7z015_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z015_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;]"/>
+  <device name="xc7z015_1" gui_info="dashboard1=hw_ila_1[xc7z015_1/hw_ila_1/Status=ILA_STATUS_1;xc7z015_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z015_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z015_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z015_1/XADC=XADC_PLOT_1;xc7z015_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z015_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/$_project_name_.ltx"/>
@@ -806,7 +806,7 @@
         <net name="PLxB.ImGenxB.IterBramInxD[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
@@ -816,7 +816,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[23:0]"/>
+        <Option Id="MAP" value="probe5[23:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -860,7 +860,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -913,6 +913,42 @@
         <net name="PLxB.ImGenxB.MandelCalc/IterOutxD[2]"/>
         <net name="PLxB.ImGenxB.MandelCalc/IterOutxD[1]"/>
         <net name="PLxB.ImGenxB.MandelCalc/IterOutxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[15]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[14]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[13]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[12]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[11]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[10]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[9]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[8]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[7]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[6]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[5]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[4]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[3]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[2]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[1]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/RESULT[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -1072,7 +1108,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="MAP" value="probe15[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1114,7 +1150,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="MAP" value="probe17[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1135,7 +1171,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="MAP" value="probe18[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1156,7 +1192,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="MAP" value="probe19[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1177,7 +1213,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="MAP" value="probe20[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1198,7 +1234,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="MAP" value="probe10[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1219,7 +1255,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe17[0]"/>
+        <Option Id="MAP" value="probe21[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1240,7 +1276,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe20[0]"/>
+        <Option Id="MAP" value="probe22[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1251,7 +1287,7 @@
         <net name="PLxB.ImGenxB.MandelCalc/ZIM2_n_31"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -1261,7 +1297,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="MAP" value="probe1[15:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1287,7 +1323,65 @@
         <net name="PLxB.ImGenxB.MandelCalc/ZIm2OutPxD[12]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[15]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[14]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[13]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[12]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[11]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[10]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[9]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[8]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[7]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[6]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[5]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[4]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[3]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[2]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[1]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/ZimN1OutPxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[15]"/>
+        <net name="PLxB.ImGenxB.MandelCalc/Znorm2OutPxD[14]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -1297,7 +1391,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe1[2:0]"/>
+        <Option Id="MAP" value="probe3[2:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2459,7 +2553,7 @@
         <net name="VgaPixCountersxD"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -2495,7 +2589,7 @@
         <net name="VgaPixCountersxD[HxD][0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>

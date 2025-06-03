@@ -104,10 +104,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 5
-  set_param bd.open.in_stealth_mode 2
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 22  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z015clg485-2
@@ -129,9 +126,9 @@ OPTRACE "add files" START { }
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
   add_files C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/bd/MandelCacl/MandelCacl.bd
-  read_ip -quiet c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/mem0/mem0.xci
+  read_ip -quiet C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/mem0/mem0.xci
   add_files C:/CochetVictorLPSC/scalp_revc_windows/scalp_zynqps/scalp_zynqps.bd
-  read_ip -quiet c:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/CochetVictorLPSC/scalp_revc_windows/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/debug.xdc

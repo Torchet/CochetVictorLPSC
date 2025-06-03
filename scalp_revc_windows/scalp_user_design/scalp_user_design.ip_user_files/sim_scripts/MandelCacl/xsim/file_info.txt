@@ -1,0 +1,3 @@
+MandelCacl_xpm_cdc_gen_0_1.v,verilog,xil_defaultlib,../../../bd/MandelCacl/ip/MandelCacl_xpm_cdc_gen_0_1/sim/MandelCacl_xpm_cdc_gen_0_1.v,
+MandelCacl.vhd,vhdl,xil_defaultlib,../../../bd/MandelCacl/sim/MandelCacl.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

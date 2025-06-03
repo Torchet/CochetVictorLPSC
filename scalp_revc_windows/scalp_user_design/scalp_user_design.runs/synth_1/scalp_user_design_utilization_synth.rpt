@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Sun Jun  1 21:42:21 2025
+| Date         : Mon Jun  2 23:36:21 2025
 | Host         : Torchet running 64-bit major release  (build 9200)
 | Command      : report_utilization -file scalp_user_design_utilization_synth.rpt -pb scalp_user_design_utilization_synth.pb
 | Design       : scalp_user_design
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  662 |     0 |          0 |     46200 |  1.43 |
-|   LUT as Logic          |  662 |     0 |          0 |     46200 |  1.43 |
+| Slice LUTs*             |  716 |     0 |          0 |     46200 |  1.55 |
+|   LUT as Logic          |  716 |     0 |          0 |     46200 |  1.55 |
 |   LUT as Memory         |    0 |     0 |          0 |     14400 |  0.00 |
-| Slice Registers         |  942 |     0 |          0 |     92400 |  1.02 |
-|   Register as Flip Flop |  941 |     0 |          0 |     92400 |  1.02 |
+| Slice Registers         | 1002 |     0 |          0 |     92400 |  1.08 |
+|   Register as Flip Flop | 1001 |     0 |          0 |     92400 |  1.08 |
 |   Register as Latch     |    1 |     0 |          0 |     92400 | <0.01 |
 | F7 Muxes                |    0 |     0 |          0 |     23100 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     11550 |  0.00 |
@@ -58,9 +58,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 167   |          Yes |           - |        Reset |
-| 13    |          Yes |         Set |            - |
-| 761   |          Yes |       Reset |            - |
+| 168   |          Yes |           - |        Reset |
+| 22    |          Yes |         Set |            - |
+| 811   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -155,17 +155,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      |  761 |        Flop & Latch |
-| LUT4      |  219 |                 LUT |
-| LUT2      |  172 |                 LUT |
-| LUT5      |  166 |                 LUT |
-| FDCE      |  166 |        Flop & Latch |
-| LUT6      |  157 |                 LUT |
-| LUT3      |  157 |                 LUT |
-| CARRY4    |   46 |          CarryLogic |
+| FDRE      |  811 |        Flop & Latch |
+| LUT4      |  202 |                 LUT |
+| LUT6      |  192 |                 LUT |
+| LUT2      |  191 |                 LUT |
+| LUT5      |  170 |                 LUT |
+| FDCE      |  167 |        Flop & Latch |
+| LUT3      |  166 |                 LUT |
+| CARRY4    |   44 |          CarryLogic |
+| FDSE      |   22 |        Flop & Latch |
+| LUT1      |   19 |                 LUT |
 | DSP48E1   |   14 |    Block Arithmetic |
-| LUT1      |   13 |                 LUT |
-| FDSE      |   13 |        Flop & Latch |
 | IBUF      |   11 |                  IO |
 | OBUF      |   10 |                  IO |
 | OSERDESE2 |    8 |                  IO |
@@ -200,7 +200,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | scalp_zynqps_axi_gpio_joystick_0                      |    1 |
 | mem0                                                  |    1 |
 | blk_mem_gen_0                                         |    1 |
-| MandelCacl_xpm_cdc_gen_0_1                            |    1 |
 +-------------------------------------------------------+------+
 
 

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xpm_cdc_gen_v1_0_4,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "MandelCacl_xpm_cdc_gen_0_1,xpm_cdc_gen_v1_0_4,{}" *)
-(* CORE_GENERATION_INFO = "MandelCacl_xpm_cdc_gen_0_1,xpm_cdc_gen_v1_0_4,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_CDC_TYPE=6,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=1,DEST_SYNC_FF=4,INIT_SYNC_FF=0,SRC_INPUT_REG=1,WIDTH=1,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
+(* CORE_GENERATION_INFO = "MandelCacl_xpm_cdc_gen_0_1,xpm_cdc_gen_v1_0_4,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_CDC_TYPE=1,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=1,DEST_SYNC_FF=4,INIT_SYNC_FF=0,SRC_INPUT_REG=1,WIDTH=3,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module MandelCacl_xpm_cdc_gen_0_1 (
   src_clk,
@@ -69,18 +69,18 @@ input wire src_clk;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dest_signal_clock, FREQ_HZ 48000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MandelCacl_Dest_Clk, INSERT_VIP 0" *)
 input wire dest_clk;
-input wire [0 : 0] src_in;
-output wire [0 : 0] dest_out;
+input wire [2 : 0] src_in;
+output wire [2 : 0] dest_out;
 
   xpm_cdc_gen_v1_0_4 #(
-    .C_CDC_TYPE(6),
+    .C_CDC_TYPE(1),
     .SRC_CLK_PERIOD(5000),
     .DEST_CLK_PERIOD(2500),
     .SIM_ASSERT_CHK(1),
     .DEST_SYNC_FF(4),
     .INIT_SYNC_FF(0),
     .SRC_INPUT_REG(1),
-    .WIDTH(1),
+    .WIDTH(3),
     .REG_OUTPUT(0),
     .SIM_LOSSLESS_GRAY_CHK(0),
     .SRC_SYNC_FF(4),
@@ -93,7 +93,7 @@ output wire [0 : 0] dest_out;
     .dest_clk(dest_clk),
     .src_in(src_in),
     .dest_out(dest_out),
-    .src_in_bin(1'B1),
+    .src_in_bin(3'B1),
     .dest_out_bin(),
     .src_rcv(),
     .src_send(1'B1),

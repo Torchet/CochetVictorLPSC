@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Sun Jun  1 21:45:25 2025
+| Date         : Mon Jun  2 23:38:35 2025
 | Host         : Torchet running 64-bit major release  (build 9200)
 | Command      : report_drc -file scalp_user_design_drc_routed.rpt -pb scalp_user_design_drc_routed.pb -rpx scalp_user_design_drc_routed.rpx
 | Design       : scalp_user_design
@@ -24,24 +24,27 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 114
+             Checks found: 125
 +-----------+----------+-------------------------------------------------------------------+--------+
 | Rule      | Severity | Description                                                       | Checks |
 +-----------+----------+-------------------------------------------------------------------+--------+
 | AVAL-70   | Warning  | OSERDES_DataRateTqTriWidth                                        | 8      |
 | DPIP-1    | Warning  | Input pipelining                                                  | 23     |
-| DPOP-1    | Warning  | PREG Output pipelining                                            | 9      |
+| DPOP-1    | Warning  | PREG Output pipelining                                            | 15     |
+| DPOP-2    | Warning  | MREG Output pipelining                                            | 9      |
 | PDCN-1569 | Warning  | LUT equation term check                                           | 3      |
-| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN                                        | 13     |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                                        | 7      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                                        | 7      |
+| PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                                        | 1      |
+| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN                                        | 3      |
+| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                                        | 3      |
+| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                                        | 2      |
 | RTSTAT-10 | Warning  | No routable loads                                                 | 1      |
 | AVAL-4    | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 14     |
 | AVAL-5    | Advisory | enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND   | 5      |
 | REQP-20   | Advisory | enum_AREG_0_connects_CEA1_GND_connects_CEA2_GND                   | 5      |
 | REQP-24   | Advisory | enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND                   | 5      |
 | REQP-29   | Advisory | enum_CREG_0_connects_CEC_GND                                      | 5      |
-| REQP-31   | Advisory | enum_PREG_0_connects_CEP_GND                                      | 9      |
+| REQP-30   | Advisory | enum_MREG_0_connects_CEM_GND                                      | 9      |
+| REQP-31   | Advisory | enum_PREG_0_connects_CEP_GND                                      | 14     |
 +-----------+----------+-------------------------------------------------------------------+--------+
 
 2. REPORT DETAILS
@@ -223,182 +226,167 @@ Related violations: <none>
 
 DPOP-1#5 Warning
 PREG Output pipelining  
-DSP PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP PLxB.ImGenxB.MandelCalc/Pix_X_Offset/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/Pix_X_Offset/bl.DSP48_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#6 Warning
 PREG Output pipelining  
-DSP PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#7 Warning
 PREG Output pipelining  
-DSP PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP PLxB.ImGenxB.MandelCalc/Pix_Y_Offset/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/Pix_Y_Offset/bl.DSP48_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#8 Warning
 PREG Output pipelining  
-DSP PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#9 Warning
 PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#10 Warning
+PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZIM_N1/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/ZIM_N1/bl.DSP48_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#11 Warning
+PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZNORM2/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/ZNORM2/bl.DSP48_2/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#12 Warning
+PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZNORM2/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/ZNORM2/bl.DSP48_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#13 Warning
+PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#14 Warning
+PREG Output pipelining  
 DSP PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2 output PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#15 Warning
+PREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2 output PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/IterOut_Mult/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/IterOut_Mult/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/Pix_X_Mult/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/Pix_X_Mult/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2 multiplier stage PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 PDCN-1569#1 Warning
 LUT equation term check  
-Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A5*A3)+(A5*(~A3)*(~A1))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#2 Warning
 LUT equation term check  
-Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A2*A1)+(A2*(~A1)*(~A3))+((~A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A3' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#3 Warning
 LUT equation term check  
-Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A2*A1)+(A2*(~A1)*(~A3))+((~A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A5*A3)+(A5*(~A3)*(~A1))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDRC-136#1 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X61Y93 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-142#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X100Y71 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X34Y123 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-142#2 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X20Y40 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X34Y126 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-142#3 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X30Y42 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#4 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X38Y37 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#5 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X54Y41 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#6 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X58Y32 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#7 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X58Y34 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#8 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X58Y36 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#9 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X58Y57 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#10 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X58Y65 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#11 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X62Y32 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#12 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X62Y67 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#13 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X66Y36 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X38Y125 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X38Y37 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X34Y123 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#2 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X58Y34 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X34Y126 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#3 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X58Y36 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#4 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X58Y57 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#5 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X58Y65 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#6 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X62Y32 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#7 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X62Y67 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X38Y125 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X38Y37 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X34Y123 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X58Y34 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#3 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X58Y36 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#4 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X58Y57 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#5 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X58Y65 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#6 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X62Y67 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#7 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X90Y77 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X34Y126 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-37 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1],
+25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1],
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i,
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow,
@@ -413,7 +401,7 @@ dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS,
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0],
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0],
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0]
- (the first 15 of 35 listed nets/buses).
+ (the first 15 of 23 listed nets/buses).
 Related violations: <none>
 
 AVAL-4#1 Advisory
@@ -586,6 +574,51 @@ enum_CREG_0_connects_CEC_GND
 PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2: When the DSP48E1 CREG attribute is set to 0, the CEC input pin should be tied to GND to save power.
 Related violations: <none>
 
+REQP-30#1 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#2 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/AB_Mult/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#3 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/IterOut_Mult/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#4 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/Pix_X_Mult/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#5 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#6 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#7 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#8 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#9 Advisory
+enum_MREG_0_connects_CEM_GND  
+PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
 REQP-31#1 Advisory
 enum_PREG_0_connects_CEP_GND  
 PLxB.ImGenxB.MandelCalc/A2mB2_Mult/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
@@ -608,27 +641,52 @@ Related violations: <none>
 
 REQP-31#5 Advisory
 enum_PREG_0_connects_CEP_GND  
-PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+PLxB.ImGenxB.MandelCalc/Pix_X_Offset/bl.DSP48_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
 Related violations: <none>
 
 REQP-31#6 Advisory
 enum_PREG_0_connects_CEP_GND  
-PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+PLxB.ImGenxB.MandelCalc/Pix_Y_Mult/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
 Related violations: <none>
 
 REQP-31#7 Advisory
 enum_PREG_0_connects_CEP_GND  
-PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+PLxB.ImGenxB.MandelCalc/Pix_Y_Offset/bl.DSP48_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
 Related violations: <none>
 
 REQP-31#8 Advisory
 enum_PREG_0_connects_CEP_GND  
-PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+PLxB.ImGenxB.MandelCalc/ZIM/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
 Related violations: <none>
 
 REQP-31#9 Advisory
 enum_PREG_0_connects_CEP_GND  
+PLxB.ImGenxB.MandelCalc/ZIM2/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-31#10 Advisory
+enum_PREG_0_connects_CEP_GND  
+PLxB.ImGenxB.MandelCalc/ZIM_N1/bl.DSP48_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-31#11 Advisory
+enum_PREG_0_connects_CEP_GND  
+PLxB.ImGenxB.MandelCalc/ZNORM2/bl.DSP48_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-31#12 Advisory
+enum_PREG_0_connects_CEP_GND  
+PLxB.ImGenxB.MandelCalc/ZRE/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-31#13 Advisory
+enum_PREG_0_connects_CEP_GND  
 PLxB.ImGenxB.MandelCalc/ZRE2/bl.DSP48E_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-31#14 Advisory
+enum_PREG_0_connects_CEP_GND  
+PLxB.ImGenxB.MandelCalc/ZRE_N1/bl.DSP48_2: When the DSP48E1 PREG attribute is set to 0, the CEP input pin should be tied to GND to save power.
 Related violations: <none>
 
 

@@ -41,7 +41,8 @@ entity MndlCalc is
         comma : integer := 12; -- nombre de bits après la virgule
         max_iter : integer := 100;
         SIZE : integer := 16;
-        IT_SIZE : integer := 24
+        IT_SIZE : integer := 24;
+        LAT : integer := 0
         );
     Port(
         ClkxI       : in std_logic;
@@ -49,11 +50,7 @@ entity MndlCalc is
         RdyxO       : out std_logic;
         StartxI     : in std_logic;
         FinishedxO  : out std_logic;
-        CpixxI      : in std_logic_vector (SIZE-1 downto 0);
-        CpixyI      : in std_logic_vector (SIZE-1 downto 0);
-        IterxO      : out std_logic_vector (IT_SIZE-1 downto 0);
-        FifoWrEnxO  : out std_logic; 
-        FifoAlmFullxI : in std_logic
+        IterxO      : out std_logic_vector (IT_SIZE-1 downto 0)
     );
 end MndlCalc;
 
@@ -61,21 +58,24 @@ architecture Behavioral of MndlCalc is
 
    signal StartxS : std_logic:= '1';
    -- Initial position signal
-   signal CaPixxD : std_logic_vector(SIZE-1 downto 0):=x"0001";
-   signal CbPixxD : std_logic_vector(SIZE-1 downto 0):=x"0001";
+   signal CaPixxD : std_logic_vector(SIZE-1 downto 0):=x"00FA"; 
+   signal CbPixxD : std_logic_vector(SIZE-1 downto 0):=x"00FA";
+
+   -- Initial position signal
+   signal CaPixOffsetxD : std_logic_vector(SIZE-1 downto 0):=x"00FA";
+   signal CbPixOffsetxD : std_logic_vector(SIZE-1 downto 0):=x"00FA";
+
+   signal PixOffset : std_logic_vector(SIZE-1 downto 0):=x"00FA";
 
    -- Initial position signal
    signal CaConvxD : std_logic_vector(SIZE-1 downto 0):=x"0001";
    signal CbConvxD : std_logic_vector(SIZE-1 downto 0):=x"0001";
 
-   signal Im_range : std_logic_vector(SIZE-1 downto 0):=x"0011";
-   signal Im_Offset : std_logic_vector(SIZE-1 downto 0):=x"1000";
+   signal Im_range : std_logic_vector(SIZE-1 downto 0):=x"0038"; 
+   signal Im_Offset : std_logic_vector(SIZE-1 downto 0):=x"1800";
 
-   signal Re_range : std_logic_vector(SIZE-1 downto 0):=x"0011";  
-   signal Re_Offset : std_logic_vector(SIZE-1 downto 0):=x"1000"; 
-
-   signal PixFinx : std_logic_vector(SIZE-1 downto 0):=(others => '0');
-   signal PixFiny : std_logic_vector(SIZE-1 downto 0):=(others => '0');
+   signal Re_range : std_logic_vector(SIZE-1 downto 0):=x"002F";  
+   signal Re_Offset : std_logic_vector(SIZE-1 downto 0):=x"1800"; 
 
    -- Initial position signal
    signal CaxD : std_logic_vector(SIZE-1 downto 0):=(others => '0');
@@ -193,7 +193,7 @@ begin
       A2mB2_Mult : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -211,7 +211,7 @@ begin
       AB_Mult : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -228,7 +228,7 @@ begin
       ZRE : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -245,7 +245,7 @@ begin
       ZIM : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -260,7 +260,7 @@ begin
       ZRE_N1 : ADDSUB_MACRO
       generic map (
          DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,        -- Desired clock cycle latency, 0-2
+         LATENCY => LAT,        -- Desired clock cycle latency, 0-2
          WIDTH => SIZE)         -- Input / Output bus width, 1-48
       port map (
          CARRYOUT => ZreN1OVFPxD, -- 1-bit carry-out output signal
@@ -277,7 +277,7 @@ begin
       ZIM_N1 : ADDSUB_MACRO
       generic map (
          DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,        -- Desired clock cycle latency, 0-2
+         LATENCY => LAT,        -- Desired clock cycle latency, 0-2
          WIDTH => SIZE)         -- Input / Output bus width, 1-48
       port map (
          CARRYOUT => ZimN1OVFPxD, -- 1-bit carry-out output signal
@@ -294,7 +294,7 @@ begin
       ZRE2 : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -309,7 +309,7 @@ begin
       ZIM2 : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -324,7 +324,7 @@ begin
       ZNORM2 : ADDSUB_MACRO
       generic map (
          DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,        -- Desired clock cycle latency, 0-2
+         LATENCY => LAT,        -- Desired clock cycle latency, 0-2
          WIDTH => SIZE)         -- Input / Output bus width, 1-48
       port map (
          CARRYOUT => Znorm2OVFPxD, -- 1-bit carry-out output signal
@@ -341,7 +341,7 @@ begin
       IterOut_Mult : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => 20,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => 8)          -- Multiplier B-input bus width, 1-18
       port map (
@@ -353,15 +353,16 @@ begin
          RST => RstxI  -- 1-bit input active high reset
       );
 
+      CaPixOffsetxD <= std_logic_vector(unsigned(CaPixxD)-unsigned(PixOffset));
       Pix_X_Mult : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
          P => ZaBufxD,     -- Multiplier ouput bus, width determined by WIDTH_P generic
-         A => CaPixxD,     -- Multiplier input A bus, width determined by WIDTH_A generic
+         A => CaPixOffsetxD,     -- Multiplier input A bus, width determined by WIDTH_A generic
          B => Re_range,     -- Multiplier input B bus, width determined by WIDTH_B generic
          CE => '1',   -- 1-bit active high input clock enable
          CLK => ClkxI, -- 1-bit positive edge clock input
@@ -371,7 +372,7 @@ begin
       Pix_X_Offset : ADDSUB_MACRO
       generic map (
          DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,        -- Desired clock cycle latency, 0-2
+         LATENCY => LAT,        -- Desired clock cycle latency, 0-2
          WIDTH => SIZE)         -- Input / Output bus width, 1-48
       port map (
          CARRYOUT => PixOffsetXOVFPxD, -- 1-bit carry-out output signal
@@ -385,15 +386,16 @@ begin
          RST => RstxI            -- 1-bit active high synchronous reset
       );
 
+      CbPixOffsetxD <= std_logic_vector(unsigned(CbPixxD)-unsigned(PixOffset));
       Pix_Y_Mult : MULT_MACRO
       generic map (
          DEVICE => "7SERIES",    -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,           -- Desired clock cycle latency, 0-4
+         LATENCY => LAT,           -- Desired clock cycle latency, 0-4
          WIDTH_A => SIZE,          -- Multiplier A-input bus width, 1-25
          WIDTH_B => SIZE)          -- Multiplier B-input bus width, 1-18
       port map (
          P => ZbBufxD,     -- Multiplier ouput bus, width determined by WIDTH_P generic
-         A => CbPixxD,     -- Multiplier input A bus, width determined by WIDTH_A generic
+         A => CbPixOffsetxD,     -- Multiplier input A bus, width determined by WIDTH_A generic
          B => Im_range,     -- Multiplier input B bus, width determined by WIDTH_B generic
          CE => '1',   -- 1-bit active high input clock enable
          CLK => ClkxI, -- 1-bit positive edge clock input
@@ -403,7 +405,7 @@ begin
       Pix_Y_Offset : ADDSUB_MACRO
       generic map (
          DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "SPARTAN6"
-         LATENCY => 1,        -- Desired clock cycle latency, 0-2
+         LATENCY => LAT,        -- Desired clock cycle latency, 0-2
          WIDTH => SIZE)         -- Input / Output bus width, 1-48
       port map (
          CARRYOUT => PixOffsetYOVFPxD, -- 1-bit carry-out output signal
@@ -431,17 +433,14 @@ begin
 
                when STARTUP         =>
                   FinishedxS <= '0';
-                  FifoWrEnxD <= '0';
                   if StartxS = '1' then
 
                   state <= NEW_DATA;
                   end if;
                when NEW_DATA        =>
-                  if FifoAlmFullxD = '0' then
+                  if StartxS = '1' then
 
                      IterMan <= (others => '0');
-                     --CaPixxD  <= CpixxI;
-                     --CbPixxD  <= CpixyI;
                      ZaxD <= CaConvxD;
                      ZbxD <= CbConvxD;
 
@@ -449,7 +448,7 @@ begin
                      CbxD <= CbConvxD;
                      state <= WAIT_RSLT;
 
-                  elsif FifoAlmFullxD = '1' then
+                  elsif StartxS = '0' then
                      state <= WAIT_MMRY;
                   end if;
                   
@@ -459,34 +458,30 @@ begin
                   ZbxD <= ZimN1OutPxD;
 
                   if (IterMan=x"63" or Znorm2OVFPxD='1' or Znorm2OutPxD >= x"4000") then
-                     FinishedxS <= '1';
-                     
                      IterxO <= IterOutxD(IT_SIZE-1 downto 0);
                      state <= WRITE_FIFO ;
                   end if;
                when WRITE_FIFO =>
-                  FifoWrEnxD <= '1';  -- One-cycle write pulse
                   -- Check if we are at the end of pixel H and Set or reset pixel H
-                  if CaPixxD =  x"01D6" then
-
+                  FinishedxS <= '1';
+                  if CaPixxD >= x"01D6" then
                      CaPixxD <= x"00FA";
-                     -- Set or Reset Pixel V
-                     if CbPixxD = x"01D6" then
-                        CbPixxD <= x"00FA";
+                     if CbPixxD >=  x"01D6"  then
+                        CbPixxD <=  x"00FA";
                      else
-                        CbPixxD <= std_logic_vector(unsigned(CbPixxD)+1);
+                        CbPixxD <= std_logic_vector(unsigned(CbPixxD)+1); 
                      end if;
-                  else 
-                        CaPixxD <= std_logic_vector(unsigned(CaPixxD)+1);
+                  else
+                     CaPixxD <= std_logic_vector(unsigned(CaPixxD)+1);
                   end if;
+
                   state <= DONE_WRITE;
 
                when DONE_WRITE =>
-                  FifoWrEnxD <= '0';
                   FinishedxS <= '0';
                   state <= NEW_DATA;
                when WAIT_MMRY  =>   
-                  if FifoAlmFullxD = '0' then
+                  if StartxS = '1' then
                      state <= NEW_DATA;
                   end if;  
             end case;
@@ -497,6 +492,4 @@ begin
 
 
       FinishedxO <= FinishedxS;
-      --FifoWrEnxO <= FifoWrEnxD; 
-      FifoAlmFullxD <= FifoAlmFullxI;
 end Behavioral;

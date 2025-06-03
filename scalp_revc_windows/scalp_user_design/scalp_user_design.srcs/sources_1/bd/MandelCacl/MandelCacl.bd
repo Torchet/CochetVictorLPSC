@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAA6B85E2C3F0AC4D",
+      "boundary_crc": "0x9DC4BC0239D42282",
       "device": "xc7z015clg485-2",
       "gen_directory": "../../../../scalp_user_design.gen/sources_1/bd/MandelCacl",
       "name": "MandelCacl",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2024.2",
       "validated": "true"
     },
@@ -64,9 +64,11 @@
           }
         }
       },
-      "Src_In": {
+      "Dest_Out": {
         "type": "data",
-        "direction": "I",
+        "direction": "O",
+        "left": "2",
+        "right": "0",
         "parameters": {
           "LAYERED_METADATA": {
             "value": "undef",
@@ -74,15 +76,14 @@
           }
         }
       },
-      "Dest_Out": {
-        "type": "data",
-        "direction": "O",
-        "left": "0",
+      "Src_In": {
+        "direction": "I",
+        "left": "2",
         "right": "0",
         "parameters": {
           "LAYERED_METADATA": {
             "value": "undef",
-            "value_src": "default"
+            "value_src": "default_prop"
           }
         }
       }
@@ -96,7 +97,10 @@
         "inst_hier_path": "xpm_cdc_gen_0",
         "parameters": {
           "CDC_TYPE": {
-            "value": "xpm_cdc_single"
+            "value": "xpm_cdc_array_single"
+          },
+          "WIDTH": {
+            "value": "3"
           }
         }
       }
